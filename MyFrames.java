@@ -6,7 +6,7 @@ public class MyFrames {
     public static final int TOTAL_FRAMES = 120;
     public static final Consumer<BufferedImage>[] FRAMES = new Consumer[TOTAL_FRAMES];
     public static final Consumer<BufferedImage>[] BACKGROUND_FRAMES = new Consumer[TOTAL_FRAMES];
-
+//oom
 //     static {
 //     int totalFrames = 120;
 //     for (int i = 0; i < totalFrames; i++) {
