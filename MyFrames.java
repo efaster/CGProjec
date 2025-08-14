@@ -41,7 +41,7 @@ public class MyFrames {
 static {
     for (int i = 0; i < TOTAL_FRAMES; i++) {
         if (i < 17) {
-            FRAMES[i] = Potatoframe5();
+            FRAMES[i] = Heven1();
         } 
         // else if (i < 34) {
         //     FRAMES[i] = Potatoframe2();
@@ -5458,7 +5458,33 @@ static {
 
         };
     }
-    
+    private static Consumer<BufferedImage> Heven1() {
+        return image -> {
+            Graphics2D g = image.createGraphics();
+            g.setColor(Color.WHITE);
+            g.fillRect(0, 0, image.getWidth(), image.getHeight());
+            
+            //sukubody 
+            GraphicsUtils.drawQuadCurve(g, 151, 366, 139, 362, 116, 396, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 116, 396, 105, 406, 90, 414, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 90, 414, 94, 425, 104, 434, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 90, 414, 92, 433, 90, 449, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 90, 449, 66, 465, 43, 478, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 43, 478, 49, 493, 77, 502, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 77, 502, 125, 502, 159, 499, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 159, 499, 189, 509, 215, 509, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 215, 509, 232, 486, 215, 468, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 209, 483, 215, 468, 216, 457, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 216, 457, 205, 448, 180, 437, Color.black,2f);
+            GraphicsUtils.drawQuadCurve(g, 192, 442, 191, 426, 199, 411, Color.black,2f);
+            
+
+
+
+
+
+        };
+    }
 
 
     public static void drawFrame(Graphics2D g, int index) {
