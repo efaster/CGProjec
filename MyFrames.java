@@ -7,56 +7,59 @@ public class MyFrames {
     public static final Consumer<BufferedImage>[] FRAMES = new Consumer[TOTAL_FRAMES];
     public static final Consumer<BufferedImage>[] BACKGROUND_FRAMES = new Consumer[TOTAL_FRAMES];
 
-//     static {
-//     int totalFrames = 120;
-//     for (int i = 0; i < totalFrames; i++) {
-//         int frameIndex = (i/4) % 17;  // 17 เฟรมทั้งหมด แช่ภาพละ 5 เฟรม
-
-//         switch(frameIndex) {
-//             // Potato ก่อน
-//             case 0:  FRAMES[i] = Potatoframe1(); break;
-//             case 1:  FRAMES[i] = Potatoframe2(); break;
-//             case 2:  FRAMES[i] = Potatoframe3(); break;
-//             case 3:  FRAMES[i] = Potatoframe4(); break;
-//             case 4:  FRAMES[i] = Potatoframe5(); break;
-//             case 5:  FRAMES[i] = Potatoframe6(); break;
-//             case 6:  FRAMES[i] = Potatoframe7(); break;
-
-//             // Gojo ต่อ
-//             case 7:  FRAMES[i] = Gojo1(); break;
-//             case 8:  FRAMES[i] = Gojo2(); break;
-//             case 9:  FRAMES[i] = Gojo3(); break;
-//             case 10: FRAMES[i] = Gojo4(); break;
-//             case 11: FRAMES[i] = Gojo5(); break;
-//             case 12: FRAMES[i] = Gojo6(); break;
-//             case 13: FRAMES[i] = Gojo7(); break;
-//             case 14: FRAMES[i] = Gojo8(); break;
-//             case 15: FRAMES[i] = Gojo9(); break;
-//             case 16: FRAMES[i] = Gojo10(); break;
-//         }
-//     }
-// }
-
-
 static {
     for (int i = 0; i < TOTAL_FRAMES; i++) {
-        if (i < 17) {
-            FRAMES[i] = Heven2();
-        } 
-        // else if (i < 34) {
-        //     FRAMES[i] = Potatoframe2();
-        // } else if (i < 51) {
-        //     FRAMES[i] = Potatoframe3();
-        // } else if (i < 68) {
-        //     FRAMES[i] = Potatoframe4();
-        // } else {
-        //     int phase = (i - 68) % 3;
-        //     if (phase == 0) FRAMES[i] = Potatoframe5();
-        //     else if (phase == 1) FRAMES[i] = Potatoframe6();
-        //     else FRAMES[i] = Potatoframe7();
-        // }
+        if (i < 9) FRAMES[i] = Potatoframe1();
+        else if (i < 18) FRAMES[i] = Gojo1();
+        else if (i < 32) FRAMES[i] = NahIwin();
+        else if (i < 34) FRAMES[i] = Gojo2();
+        else if (i < 36) FRAMES[i] = Gojo3();
+        else if (i < 38) FRAMES[i] = Gojo4();
+        else if (i < 40) FRAMES[i] = Gojo5();
+        else if (i < 42) FRAMES[i] = Gojo6();
+        else if (i < 44) FRAMES[i] = Gojo7();
+        else if (i < 46) FRAMES[i] = Gojo8();
+        else if (i < 48) FRAMES[i] = Potatoframe2();
+        else if (i < 50) FRAMES[i] = Potatoframe3();
+        else if (i < 54) FRAMES[i] = Potatoframe4();
+        else if (i < 62) FRAMES[i] = Gojo8();
+        else if (i < 63) FRAMES[i] = Gojo12();
+        else if (i < 64) FRAMES[i] = Gojo13();
+        else if (i < 65) FRAMES[i] = Gojo14();
+        else if (i < 66) FRAMES[i] = Gojo15();
+        else if (i < 67) FRAMES[i] = Gojo16();
+        else if (i < 68) FRAMES[i] = Gojo17();
+        else if (i < 69) FRAMES[i] = Gojo18();
+        else if (i < 70) FRAMES[i] = Gojo19();
+        else if (i < 75) FRAMES[i] = Potatoframe8();
+        else if (i < 80) FRAMES[i] = Potatoframe9();
+        else if (i < 82) FRAMES[i] = Potatoframe10();
+        else if (i < 84) FRAMES[i] = Potatoframe11(); 
+        else if (i < 95) FRAMES[i] = Gojo10();
+        else if (i < 111) FRAMES[i] = Heven1();
+        else if (i < 119)FRAMES[i] = Heven2();
     }
-} 
+}
+
+//  static {
+//     for (int i = 0; i < TOTAL_FRAMES; i++) {
+//         if (i < 17) {
+//             FRAMES[i] = Gojo10();
+//         } 
+// //     //     else if (i < 34) {
+// //     //         FRAMES[i] = Potatoframe2();
+// //     //     } else if (i < 51) {
+// //     //         FRAMES[i] = Potatoframe3();
+// //     //     } else if (i < 68) {
+// //     //         FRAMES[i] = Potatoframe4();
+// //     //     } else {
+// //     //         int phase = (i - 68) % 3;
+// //     //         if (phase == 0) FRAMES[i] = Potatoframe5();
+// //     //         else if (phase == 1) FRAMES[i] = Potatoframe6();
+// //     //         else FRAMES[i] = Potatoframe7();
+// //     //     }
+//       }
+//  } 
 
     //frame1 
     private static Consumer<BufferedImage> Potatoframe1() {
@@ -5588,7 +5591,8 @@ static {
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
             
-           //floor 1 line(left)
+           //Floor    
+            //floor 1 line(left)
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,406,31,406,50,405,Color.black,1.5f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,405,69,403,68,403,Color.black,1.5f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,403,80,404,86,403,Color.black,1.5f);
@@ -5672,8 +5676,11 @@ static {
         //Tree 2
             //2.1 branch down 
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,235,425,248,440,244,Color.black,1.5f); //เชื่อม hair
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); //เชื่อม คำ ด้านซ้าย
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); //เชื่อม คำ ด้านขวา
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,466,244,476,255,493,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,247,504,255,516,244,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,244,531,256,544,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,576,242,585,252,600,238,Color.black,1.5f);
             //2.2 branch left
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,0,465,8,464,22,Color.black,1.5f); 
@@ -5698,6 +5705,8 @@ static {
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,191,576,198,588,197,Color.black,1.5f);
             //2.4 trunk1
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,394,513,364,513,338,Color.black,1.5f); //เชื่อม คำ
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,513,338,513,309,514,289,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,514,289,513,267,513,247,Color.black,1.5f); //เชื่อม 2.1 branch down
             //2.5 trunk2 
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,560,394,559,356,561,329,Color.black,1.5f); //เชื่อม floor2
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,329,561,288,566,250,Color.black,1.5f); //เชื่อม 2.1 branch down
@@ -5751,8 +5760,8 @@ static {
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,448,309,452,275,452,250,Color.black,1.5f); //เชื่อม 2.1 branch down
             //5.4 trunk2 
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,394,488,258,488,328,Color.black,1.5f); //เชื่อม dirt2 + 2.1 branch down
-            
-
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,488,328,487,301,487,285,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,285,487,265,487,251,Color.black,1.5f); //เชื่อม 2.1 branch down
 
             //body
             GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
@@ -5926,6 +5935,179 @@ static {
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
             
+//Floor    
+            //floor 1 line(left)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,406,31,406,50,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,405,69,403,68,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,403,80,404,86,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,86,403,94,402,100,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,403,108,402,118,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,403,125,402,135,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,135,405,155,405,Color.black,1.5f); //เชื่อม body
+            // floor 2 line(right)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,399,399,420,401,433,401,Color.black,1.5f); // เชื่อม body
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,433,401,454,400,470,397,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,470,397,484,393,496,394,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,496,394,512,393,522,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,395,559,394,575,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,395,587,397,600,396,Color.black,1.5f);
+            //floor 3 dirt
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,26,469,32,466,37,468,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,37,468,40,470,44,468,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,571,88,568,90,567,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,567,93,566,96,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,567,100,568,104,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,182,532,187,529,193,530,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,530,199,532,203,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,203,530,205,529,207,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,207,530,212,531,214,529,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,214,529,218,528,220,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,302,577,310,575,315,578,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,315,578,323,581,330,577,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,473,406,471,411,472,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,411,472,415,473,421,471,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,538,498,535,501,537,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,537,505,539,510,539,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,504,448,510,444,516,446,Color.black,1.5f); //7
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,446,523,447,528,446,Color.black,1.5f);
+            //floor 4 rock
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,526,48,522,52,517,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,52,517,61,513,75,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,513,81,519,79,524,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,524,64,526,53,526,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,95,436,90,434,92,431,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,92,431,104,427,109,429,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,429,112,431,111,434,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,434,105,435,95,436,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,497,513,493,511,495,508,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,508,500,506,509,506,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,506,516,510,515,516,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,516,509,517,497,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,559,424,553,422,553,420,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,553,420,559,417,572,419,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,572,419,576,422,573,424,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,573,424,568,425,559,424,Color.black,1.5f);
+            
+        // Tree 1
+            //1.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,225,20,238,38,225,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,225,51,238,69,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,69,225,80,241,108,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,108,225,121,238,141,228,Color.black,1.5f); //เชื่อม hair
+            //1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,104,0,114,8,111,25,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,25,130,28,132,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,132,45,147,61,144,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,82,160,85,167,105,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,167,105,180,109,183,135,Color.black,1.5f); //เชื่อม hair
+            //1.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,37,40,45,49,37,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,49,37,54,45,69,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,20,109,25,117,36,112,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,36,112,42,115,49,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,91,108,97,118,88,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,88,126,97,134,88,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,4,167,14,169,17,164,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,164,22,168,29,166,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,64,194,73,201,84,192,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,192,90,200,96,195,Color.black,1.5f);
+            //1.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,406,30,391,31,384,Color.black,1.5f); //เชื่อม floor1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,384,33,338,31,277,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,277,33,255,33,228,Color.black,1.5f); //เชื่อม 1.1 branch down
+            //1.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,80,404,76,321,80,234,Color.black,1.5f); //เชื่อม dirt1 + 1.1 branch down
+        //Tree 2
+            //2.1 branch down 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,235,425,248,440,244,Color.black,1.5f); //เชื่อม hair
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,466,244,476,255,493,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,247,504,255,516,244,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,244,531,256,544,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,576,242,585,252,600,238,Color.black,1.5f);
+            //2.2 branch left
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,0,465,8,464,22,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,464,22,440,34,447,42,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,447,42,430,52,425,70,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,70,403,81,403,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,106,387,116,392,134,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,392,134,375,137,364,154,Color.black,1.5f); //เชื่อม hair
+            //2.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,42,520,50,527,43,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,43,534,50,541,43,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,445,107,451,114,462,107,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,462,107,468,113,475,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,87,569,92,577,85,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,85,583,92,592,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,134,514,137,520,129,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,129,523,140,534,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,534,135,540,140,544,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,444,179,450,187,461,177,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,461,177,470,185,482,177,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,558,188,566,198,574,191,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,191,576,198,588,197,Color.black,1.5f);
+            //2.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,394,513,364,513,338,Color.black,1.5f); //เชื่อม คำ
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,513,338,513,309,514,289,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,514,289,513,267,513,247,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //2.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,560,394,559,356,561,329,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,329,561,288,566,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+        //Tree 3
+            //3.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,155,84,156,69,176,53,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,176,53,172,42,188,33,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,33,186,20,205,11,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,205,11,203,7,211,0,Color.black,1.5f);
+            //3.2 right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,333,0,350,16,345,31,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,345,31,365,34,363,57,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,363,57,377,57,371,80,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,371,80,387,81,386,104,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,104,393,105,396,110,Color.black,1.5f); //เชื่อม 2.2 branch left
+            //3.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,225,28,234,32,239,26,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,239,26,244,32,251,26,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,306,46,313,50,318,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,318,45,326,51,334,46,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,230,78,238,85,245,79,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,245,79,247,85,254,81,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,281,105,287,112,294,108,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,340,102,349,105,355,100,Color.black,1.5f);
+        //Tree 4
+            //4.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,123,27,127,18,139,14,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,139,14,137,5,150,0,Color.black,1.5f);
+            //4.2 right 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,179,0,186,3,188,10,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,10,196,7,200,13,Color.black,1.5f); //เชื่อม 3.1 branch left
+            //4.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,20,147,22,152,19,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,158,32,161,37,167,34,Color.black,1.5f);
+            //4.4 Trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,146,313,144,268,146,239,Color.black,1.5f); //เชื่อม hair+body
+            GraphicsUtilsPolygonOnly.drawLine(g,149,379,149,354,Color.black,1.5f); //เชื่อม body ล่าง
+            GraphicsUtilsPolygonOnly.drawLine(g,148,336,147,324,Color.black,1.5f); //เชื่อม body บน
+        //Tree 5
+            // 5.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,370,60,381,45,398,41,Color.black,1.5f); //เชื่อม 3.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,41,394,28,409,25,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,25,404,15,421,8,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,421,8,420,2,424,0,Color.black,1.5f);
+            // 5.2 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,427,20,435,22,440,17,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,62,390,65,395,62,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,395,62,398,66,403,61,Color.black,1.5f);   
+            //5.3 trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,450,400,448,344,448,309,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,448,309,452,275,452,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //5.4 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,394,488,258,488,328,Color.black,1.5f); //เชื่อม dirt2 + 2.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,488,328,487,301,487,285,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,285,487,265,487,251,Color.black,1.5f); //เชื่อม 2.1 branch down
+
+
             //body
             GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
             GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
@@ -6103,7 +6285,179 @@ static {
             Graphics2D g = image.createGraphics();
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
+ //Floor    
+            //floor 1 line(left)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,406,31,406,50,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,405,69,403,68,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,403,80,404,86,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,86,403,94,402,100,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,403,108,402,118,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,403,125,402,135,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,135,405,155,405,Color.black,1.5f); //เชื่อม body
+            // floor 2 line(right)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,399,399,420,401,433,401,Color.black,1.5f); // เชื่อม body
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,433,401,454,400,470,397,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,470,397,484,393,496,394,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,496,394,512,393,522,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,395,559,394,575,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,395,587,397,600,396,Color.black,1.5f);
+            //floor 3 dirt
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,26,469,32,466,37,468,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,37,468,40,470,44,468,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,571,88,568,90,567,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,567,93,566,96,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,567,100,568,104,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,182,532,187,529,193,530,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,530,199,532,203,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,203,530,205,529,207,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,207,530,212,531,214,529,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,214,529,218,528,220,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,302,577,310,575,315,578,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,315,578,323,581,330,577,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,473,406,471,411,472,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,411,472,415,473,421,471,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,538,498,535,501,537,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,537,505,539,510,539,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,504,448,510,444,516,446,Color.black,1.5f); //7
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,446,523,447,528,446,Color.black,1.5f);
+            //floor 4 rock
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,526,48,522,52,517,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,52,517,61,513,75,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,513,81,519,79,524,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,524,64,526,53,526,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,95,436,90,434,92,431,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,92,431,104,427,109,429,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,429,112,431,111,434,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,434,105,435,95,436,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,497,513,493,511,495,508,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,508,500,506,509,506,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,506,516,510,515,516,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,516,509,517,497,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,559,424,553,422,553,420,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,553,420,559,417,572,419,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,572,419,576,422,573,424,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,573,424,568,425,559,424,Color.black,1.5f);
             
+        // Tree 1
+            //1.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,225,20,238,38,225,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,225,51,238,69,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,69,225,80,241,108,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,108,225,121,238,141,228,Color.black,1.5f); //เชื่อม hair
+            //1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,104,0,114,8,111,25,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,25,130,28,132,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,132,45,147,61,144,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,82,160,85,167,105,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,167,105,180,109,183,135,Color.black,1.5f); //เชื่อม hair
+            //1.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,37,40,45,49,37,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,49,37,54,45,69,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,20,109,25,117,36,112,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,36,112,42,115,49,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,91,108,97,118,88,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,88,126,97,134,88,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,4,167,14,169,17,164,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,164,22,168,29,166,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,64,194,73,201,84,192,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,192,90,200,96,195,Color.black,1.5f);
+            //1.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,406,30,391,31,384,Color.black,1.5f); //เชื่อม floor1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,384,33,338,31,277,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,277,33,255,33,228,Color.black,1.5f); //เชื่อม 1.1 branch down
+            //1.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,80,404,76,321,80,234,Color.black,1.5f); //เชื่อม dirt1 + 1.1 branch down
+        //Tree 2
+            //2.1 branch down 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,235,425,248,440,244,Color.black,1.5f); //เชื่อม hair
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,466,244,476,255,493,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,247,504,255,516,244,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,244,531,256,544,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,576,242,585,252,600,238,Color.black,1.5f);
+            //2.2 branch left
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,0,465,8,464,22,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,464,22,440,34,447,42,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,447,42,430,52,425,70,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,70,403,81,403,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,106,387,116,392,134,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,392,134,375,137,364,154,Color.black,1.5f); //เชื่อม hair
+            //2.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,42,520,50,527,43,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,43,534,50,541,43,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,445,107,451,114,462,107,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,462,107,468,113,475,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,87,569,92,577,85,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,85,583,92,592,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,134,514,137,520,129,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,129,523,140,534,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,534,135,540,140,544,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,444,179,450,187,461,177,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,461,177,470,185,482,177,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,558,188,566,198,574,191,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,191,576,198,588,197,Color.black,1.5f);
+            //2.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,394,513,364,513,338,Color.black,1.5f); //เชื่อม คำ
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,513,338,513,309,514,289,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,514,289,513,267,513,247,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //2.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,560,394,559,356,561,329,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,329,561,288,566,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+        //Tree 3
+            //3.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,155,84,156,69,176,53,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,176,53,172,42,188,33,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,33,186,20,205,11,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,205,11,203,7,211,0,Color.black,1.5f);
+            //3.2 right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,333,0,350,16,345,31,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,345,31,365,34,363,57,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,363,57,377,57,371,80,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,371,80,387,81,386,104,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,104,393,105,396,110,Color.black,1.5f); //เชื่อม 2.2 branch left
+            //3.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,225,28,234,32,239,26,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,239,26,244,32,251,26,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,306,46,313,50,318,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,318,45,326,51,334,46,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,230,78,238,85,245,79,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,245,79,247,85,254,81,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,281,105,287,112,294,108,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,340,102,349,105,355,100,Color.black,1.5f);
+        //Tree 4
+            //4.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,123,27,127,18,139,14,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,139,14,137,5,150,0,Color.black,1.5f);
+            //4.2 right 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,179,0,186,3,188,10,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,10,196,7,200,13,Color.black,1.5f); //เชื่อม 3.1 branch left
+            //4.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,20,147,22,152,19,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,158,32,161,37,167,34,Color.black,1.5f);
+            //4.4 Trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,146,313,144,268,146,239,Color.black,1.5f); //เชื่อม hair+body
+            GraphicsUtilsPolygonOnly.drawLine(g,149,379,149,354,Color.black,1.5f); //เชื่อม body ล่าง
+            GraphicsUtilsPolygonOnly.drawLine(g,148,336,147,324,Color.black,1.5f); //เชื่อม body บน
+        //Tree 5
+            // 5.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,370,60,381,45,398,41,Color.black,1.5f); //เชื่อม 3.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,41,394,28,409,25,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,25,404,15,421,8,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,421,8,420,2,424,0,Color.black,1.5f);
+            // 5.2 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,427,20,435,22,440,17,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,62,390,65,395,62,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,395,62,398,66,403,61,Color.black,1.5f);   
+            //5.3 trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,450,400,448,344,448,309,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,448,309,452,275,452,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //5.4 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,394,488,258,488,328,Color.black,1.5f); //เชื่อม dirt2 + 2.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,488,328,487,301,487,285,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,285,487,265,487,251,Color.black,1.5f); //เชื่อม 2.1 branch down
+
+
             //body
             GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
             GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
@@ -6279,192 +6633,179 @@ static {
             Graphics2D g = image.createGraphics();
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
-            //branch1.1 line(up)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,372,16,354,32,357,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,32,357,40,349,53,354,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,354,70,346,85,361,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,85,361,103,344,120,352,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,120,352,132,342,144,352,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,352,153,348,160,354,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,160,354,164,342,171,338,Color.black,1.5f); //เชื่อม
-            //branch1.2 line(down)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,448,8,459,17,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,454,28,460,35,452,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,35,452,43,462,56,452,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,56,452,67,462,76,456,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,76,456,82,464,97,460,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,97,460,105,462,113,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,113,454,126,460,134,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,134,454,144,464,163,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,163,454,172,462,181,456,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,181,456,193,460,200,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,200,454,206,459,211,457,Color.black,1.5f); //เชื่อม
-            //branch1.3 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,27,416,32,408,40,413,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,40,413,47,408,51,416,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,56,377,61,373,68,376,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,376,72,372,75,374,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,126,375,130,368,137,372,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,137,372,142,366,147,370,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,443,74,434,82,439,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,82,439,88,433,93,441,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,115,423,118,414,128,416,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,128,416,136,410,140,417,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,161,432,167,424,174,431,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,174,431,180,425,187,428,Color.black,1.5f);
-            //branch2.1 line
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,46,350,42,334,56,322,Color.black,1.5f);  //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,56,322,51,314,77,302,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,77,302,68,289,84,286,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,286,83,281,100,284,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,284,101,270,117,272,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,117,272,119,268,125,269,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawLine(g,0,334,46,334,Color.black,1.5f); //dirt   
-            //branch2.2 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,332,88,330,96,333,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,333,101,328,107,331,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,103,306,111,302,118,305,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,305,125,301,128,305,Color.black,1.5f);
-            //branch3.1 line(up)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,384,341,409,338,426,351,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,426,351,440,343,451,351,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,451,351,463,345,476,353,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,353,494,348,506,358,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,506,358,519,348,529,366,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,529,366,545,355,562,358,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,562,358,569,346,579,351,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,579,351,584,339,600,332,Color.black,1.5f);
-            //branch3.2 line(down)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,357,454,373,463,379,458,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,379,458,398,464,409,453,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,453,425,464,438,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,438,454,445,463,457,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,457,454,469,464,483,458,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,483,458,494,467,509,456,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,456,522,463,536,453,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,536,453,549,463,557,458,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,557,458,569,467,575,461,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,461,587,470,597,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,597,454,598,462,600,466,Color.black,1.5f);
-            //branch3.3 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,385,373,392,368,398,373,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,373,403,370,406,373,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,420,395,412,403,418,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,418,410,412,412,418,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,429,398,435,391,443,398,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,443,398,453,388,459,395,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,484,382,490,379,495,382,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,382,503,379,503,384,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,490,432,498,425,503,430,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,430,508,426,512,430,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,550,411,557,401,564,407,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,564,407,570,399,575,403,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,568,437,577,432,580,437,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,580,437,586,432,590,435,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,373,583,368,588,373,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,588,373,595,367,598,371,Color.black,1.5f);
-            //branch4.1 up
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,265,449,267,454,277,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,454,277,464,267,481,270,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,481,270,499,261,508,272,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,508,272,521,265,526,272,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,526,272,536,267,552,274,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,552,274,560,266,575,270,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,270,588,261,600,265,Color.black,1.5f);
-            //branch4.2 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,437,316,443,311,452,316,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,452,316,459,309,463,316,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,480,289,487,285,491,289,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,289,495,285,499,287,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,507,331,514,326,521,331,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,521,331,526,327,530,331,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,528,297,534,290,544,293,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,293,550,288,556,293,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,322,579,312,585,315,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,585,315,591,310,595,313,Color.black,1.5f);
-            //cloud 1
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,47,6,44,17,44,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,44,24,35,42,47,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,42,47,63,35,75,46,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,46,100,40,115,62,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,115,62,125,56,137,65,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,137,65,162,83,150,92,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,150,92,143,110,115,113,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,115,113,97,122,78,114,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,78,114,60,125,38,118,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,118,17,127,0,114,Color.black,1.5f);
-            //cloud 2
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,294,19,296,8,320,8,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,320,8,335,1,351,8,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,351,8,377,1,388,12,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,12,402,10,415,19,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,19,419,27,410,27,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,410,27,410,42,381,40,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,381,40,371,50,351,45,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,351,45,339,50,332,40,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,332,40,314,45,305,31,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,305,31,284,27,294,19,Color.black,1.5f);
-            //cloud 3
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,600,75,595,63,585,68,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,585,68,567,60,568,63,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,568,63,559,67,555,75,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,555,75,547,67,542,75,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,542,75,526,71,515,85,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,85,499,88,505,99,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,505,99,490,101,487,109,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,109,490,120,509,117,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,117,515,126,536,120,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,536,120,542,128,557,121,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,557,121,576,123,581,112,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,581,112,594,116,600,110,Color.black,1.5f);
-            //floor 1.1 dirt
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,32,510,39,505,46,508,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,46,508,50,511,57,508,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g,57,508,72,508,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,40,565,50,560,57,565,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,57,565,60,570,63,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,63,567,68,565,73,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,543,126,535,136,537,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,136,537,144,539,151,537,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,151,537,160,535,174,537,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,180,498,208,496,218,506,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,298,570,305,568,311,571,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,311,571,317,574,325,572,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,344,498,355,492,361,496,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,361,496,367,496,369,492,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,369,492,374,490,379,492,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,379,492,385,494,391,492,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,560,432,560,439,557,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,439,557,447,557,454,561,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,519,528,516,546,517,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,554,487,564,485,573,485,Color.black,1.5f);
-            //floor 1.2 rock
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,12,532,4,534,3,541,Color.black,1.5f); //1
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,3,541,8,545,18,540,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,18,540,22,534,18,531,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,18,531,14,530,12,532,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,63,479,70,475,82,476,Color.black,1.5f); //2
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,82,476,88,481,74,484,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,74,484,66,482,63,479,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,180,567,188,564,193,565,Color.black,1.5f); //3
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,565,200,568,208,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,208,567,210,571,208,574,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,208,574,177,573,180,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,254,546,256,540,261,540,Color.black,1.5f); //4
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,261,540,267,543,266,546,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,266,546,261,552,256,553,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,256,553,253,550,254,546,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,510,554,519,550,527,550,Color.black,1.5f); //5
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,550,535,557,529,559,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,529,559,524,561,517,561,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g,517,561,510,554,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g,515,504,501,502,Color.black,1.5f); //6
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,502,498,501,501,499,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,501,499,506,497,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,506,497,503,495,508,490,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,508,490,520,486,528,490,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,528,490,524,493,522,499,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,499,518,502,515,504,Color.black,1.5f);
+   //Floor    
+            //floor 1 line(left)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,406,31,406,50,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,405,69,403,68,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,403,80,404,86,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,86,403,94,402,100,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,403,108,402,118,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,403,125,402,135,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,135,405,155,405,Color.black,1.5f); //เชื่อม body
+            // floor 2 line(right)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,399,399,420,401,433,401,Color.black,1.5f); // เชื่อม body
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,433,401,454,400,470,397,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,470,397,484,393,496,394,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,496,394,512,393,522,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,395,559,394,575,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,395,587,397,600,396,Color.black,1.5f);
+            //floor 3 dirt
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,26,469,32,466,37,468,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,37,468,40,470,44,468,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,571,88,568,90,567,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,567,93,566,96,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,567,100,568,104,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,182,532,187,529,193,530,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,530,199,532,203,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,203,530,205,529,207,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,207,530,212,531,214,529,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,214,529,218,528,220,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,302,577,310,575,315,578,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,315,578,323,581,330,577,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,473,406,471,411,472,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,411,472,415,473,421,471,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,538,498,535,501,537,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,537,505,539,510,539,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,504,448,510,444,516,446,Color.black,1.5f); //7
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,446,523,447,528,446,Color.black,1.5f);
+            //floor 4 rock
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,526,48,522,52,517,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,52,517,61,513,75,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,513,81,519,79,524,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,524,64,526,53,526,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,95,436,90,434,92,431,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,92,431,104,427,109,429,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,429,112,431,111,434,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,434,105,435,95,436,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,497,513,493,511,495,508,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,508,500,506,509,506,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,506,516,510,515,516,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,516,509,517,497,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,559,424,553,422,553,420,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,553,420,559,417,572,419,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,572,419,576,422,573,424,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,573,424,568,425,559,424,Color.black,1.5f);
+            
+        // Tree 1
+            //1.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,225,20,238,38,225,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,225,51,238,69,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,69,225,80,241,108,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,108,225,121,238,141,228,Color.black,1.5f); //เชื่อม hair
+            //1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,104,0,114,8,111,25,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,25,130,28,132,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,132,45,147,61,144,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,82,160,85,167,105,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,167,105,180,109,183,135,Color.black,1.5f); //เชื่อม hair
+            //1.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,37,40,45,49,37,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,49,37,54,45,69,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,20,109,25,117,36,112,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,36,112,42,115,49,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,91,108,97,118,88,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,88,126,97,134,88,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,4,167,14,169,17,164,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,164,22,168,29,166,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,64,194,73,201,84,192,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,192,90,200,96,195,Color.black,1.5f);
+            //1.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,406,30,391,31,384,Color.black,1.5f); //เชื่อม floor1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,384,33,338,31,277,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,277,33,255,33,228,Color.black,1.5f); //เชื่อม 1.1 branch down
+            //1.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,80,404,76,321,80,234,Color.black,1.5f); //เชื่อม dirt1 + 1.1 branch down
+        //Tree 2
+            //2.1 branch down 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,235,425,248,440,244,Color.black,1.5f); //เชื่อม hair
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,466,244,476,255,493,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,247,504,255,516,244,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,244,531,256,544,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,576,242,585,252,600,238,Color.black,1.5f);
+            //2.2 branch left
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,0,465,8,464,22,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,464,22,440,34,447,42,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,447,42,430,52,425,70,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,70,403,81,403,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,106,387,116,392,134,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,392,134,375,137,364,154,Color.black,1.5f); //เชื่อม hair
+            //2.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,42,520,50,527,43,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,43,534,50,541,43,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,445,107,451,114,462,107,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,462,107,468,113,475,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,87,569,92,577,85,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,85,583,92,592,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,134,514,137,520,129,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,129,523,140,534,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,534,135,540,140,544,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,444,179,450,187,461,177,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,461,177,470,185,482,177,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,558,188,566,198,574,191,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,191,576,198,588,197,Color.black,1.5f);
+            //2.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,394,513,364,513,338,Color.black,1.5f); //เชื่อม คำ
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,513,338,513,309,514,289,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,514,289,513,267,513,247,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //2.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,560,394,559,356,561,329,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,329,561,288,566,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+        //Tree 3
+            //3.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,155,84,156,69,176,53,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,176,53,172,42,188,33,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,33,186,20,205,11,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,205,11,203,7,211,0,Color.black,1.5f);
+            //3.2 right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,333,0,350,16,345,31,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,345,31,365,34,363,57,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,363,57,377,57,371,80,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,371,80,387,81,386,104,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,104,393,105,396,110,Color.black,1.5f); //เชื่อม 2.2 branch left
+            //3.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,225,28,234,32,239,26,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,239,26,244,32,251,26,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,306,46,313,50,318,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,318,45,326,51,334,46,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,230,78,238,85,245,79,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,245,79,247,85,254,81,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,281,105,287,112,294,108,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,340,102,349,105,355,100,Color.black,1.5f);
+        //Tree 4
+            //4.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,123,27,127,18,139,14,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,139,14,137,5,150,0,Color.black,1.5f);
+            //4.2 right 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,179,0,186,3,188,10,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,10,196,7,200,13,Color.black,1.5f); //เชื่อม 3.1 branch left
+            //4.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,20,147,22,152,19,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,158,32,161,37,167,34,Color.black,1.5f);
+            //4.4 Trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,146,313,144,268,146,239,Color.black,1.5f); //เชื่อม hair+body
+            GraphicsUtilsPolygonOnly.drawLine(g,149,379,149,354,Color.black,1.5f); //เชื่อม body ล่าง
+            GraphicsUtilsPolygonOnly.drawLine(g,148,336,147,324,Color.black,1.5f); //เชื่อม body บน
+        //Tree 5
+            // 5.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,370,60,381,45,398,41,Color.black,1.5f); //เชื่อม 3.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,41,394,28,409,25,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,25,404,15,421,8,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,421,8,420,2,424,0,Color.black,1.5f);
+            // 5.2 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,427,20,435,22,440,17,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,62,390,65,395,62,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,395,62,398,66,403,61,Color.black,1.5f);   
+            //5.3 trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,450,400,448,344,448,309,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,448,309,452,275,452,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //5.4 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,394,488,258,488,328,Color.black,1.5f); //เชื่อม dirt2 + 2.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,488,328,487,301,487,285,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,285,487,265,487,251,Color.black,1.5f); //เชื่อม 2.1 branch down
+
+
             //body
             GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
             GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
@@ -6639,192 +6980,179 @@ static {
             Graphics2D g = image.createGraphics();
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
-            //branch1.1 line(up)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,372,16,354,32,357,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,32,357,40,349,53,354,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,354,70,346,85,361,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,85,361,103,344,120,352,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,120,352,132,342,144,352,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,352,153,348,160,354,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,160,354,164,342,171,338,Color.black,1.5f); //เชื่อม
-            //branch1.2 line(down)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,448,8,459,17,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,454,28,460,35,452,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,35,452,43,462,56,452,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,56,452,67,462,76,456,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,76,456,82,464,97,460,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,97,460,105,462,113,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,113,454,126,460,134,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,134,454,144,464,163,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,163,454,172,462,181,456,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,181,456,193,460,200,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,200,454,206,459,211,457,Color.black,1.5f); //เชื่อม
-            //branch1.3 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,27,416,32,408,40,413,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,40,413,47,408,51,416,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,56,377,61,373,68,376,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,376,72,372,75,374,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,126,375,130,368,137,372,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,137,372,142,366,147,370,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,443,74,434,82,439,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,82,439,88,433,93,441,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,115,423,118,414,128,416,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,128,416,136,410,140,417,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,161,432,167,424,174,431,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,174,431,180,425,187,428,Color.black,1.5f);
-            //branch2.1 line
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,46,350,42,334,56,322,Color.black,1.5f);  //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,56,322,51,314,77,302,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,77,302,68,289,84,286,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,286,83,281,100,284,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,284,101,270,117,272,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,117,272,119,268,125,269,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawLine(g,0,334,46,334,Color.black,1.5f); //dirt   
-            //branch2.2 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,332,88,330,96,333,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,333,101,328,107,331,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,103,306,111,302,118,305,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,305,125,301,128,305,Color.black,1.5f);
-            //branch3.1 line(up)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,384,341,409,338,426,351,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,426,351,440,343,451,351,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,451,351,463,345,476,353,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,353,494,348,506,358,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,506,358,519,348,529,366,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,529,366,545,355,562,358,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,562,358,569,346,579,351,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,579,351,584,339,600,332,Color.black,1.5f);
-            //branch3.2 line(down)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,357,454,373,463,379,458,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,379,458,398,464,409,453,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,453,425,464,438,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,438,454,445,463,457,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,457,454,469,464,483,458,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,483,458,494,467,509,456,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,456,522,463,536,453,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,536,453,549,463,557,458,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,557,458,569,467,575,461,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,461,587,470,597,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,597,454,598,462,600,466,Color.black,1.5f);
-            //branch3.3 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,385,373,392,368,398,373,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,373,403,370,406,373,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,420,395,412,403,418,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,418,410,412,412,418,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,429,398,435,391,443,398,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,443,398,453,388,459,395,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,484,382,490,379,495,382,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,382,503,379,503,384,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,490,432,498,425,503,430,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,430,508,426,512,430,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,550,411,557,401,564,407,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,564,407,570,399,575,403,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,568,437,577,432,580,437,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,580,437,586,432,590,435,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,373,583,368,588,373,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,588,373,595,367,598,371,Color.black,1.5f);
-            //branch4.1 up
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,265,449,267,454,277,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,454,277,464,267,481,270,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,481,270,499,261,508,272,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,508,272,521,265,526,272,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,526,272,536,267,552,274,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,552,274,560,266,575,270,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,270,588,261,600,265,Color.black,1.5f);
-            //branch4.2 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,437,316,443,311,452,316,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,452,316,459,309,463,316,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,480,289,487,285,491,289,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,289,495,285,499,287,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,507,331,514,326,521,331,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,521,331,526,327,530,331,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,528,297,534,290,544,293,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,293,550,288,556,293,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,322,579,312,585,315,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,585,315,591,310,595,313,Color.black,1.5f);
-            //cloud 1
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,47,6,44,17,44,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,44,24,35,42,47,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,42,47,63,35,75,46,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,46,100,40,115,62,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,115,62,125,56,137,65,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,137,65,162,83,150,92,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,150,92,143,110,115,113,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,115,113,97,122,78,114,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,78,114,60,125,38,118,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,118,17,127,0,114,Color.black,1.5f);
-            //cloud 2
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,294,19,296,8,320,8,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,320,8,335,1,351,8,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,351,8,377,1,388,12,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,12,402,10,415,19,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,19,419,27,410,27,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,410,27,410,42,381,40,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,381,40,371,50,351,45,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,351,45,339,50,332,40,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,332,40,314,45,305,31,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,305,31,284,27,294,19,Color.black,1.5f);
-            //cloud 3
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,600,75,595,63,585,68,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,585,68,567,60,568,63,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,568,63,559,67,555,75,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,555,75,547,67,542,75,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,542,75,526,71,515,85,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,85,499,88,505,99,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,505,99,490,101,487,109,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,109,490,120,509,117,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,117,515,126,536,120,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,536,120,542,128,557,121,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,557,121,576,123,581,112,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,581,112,594,116,600,110,Color.black,1.5f);
-            //floor 1.1 dirt
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,32,510,39,505,46,508,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,46,508,50,511,57,508,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g,57,508,72,508,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,40,565,50,560,57,565,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,57,565,60,570,63,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,63,567,68,565,73,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,543,126,535,136,537,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,136,537,144,539,151,537,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,151,537,160,535,174,537,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,180,498,208,496,218,506,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,298,570,305,568,311,571,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,311,571,317,574,325,572,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,344,498,355,492,361,496,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,361,496,367,496,369,492,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,369,492,374,490,379,492,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,379,492,385,494,391,492,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,560,432,560,439,557,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,439,557,447,557,454,561,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,519,528,516,546,517,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,554,487,564,485,573,485,Color.black,1.5f);
-            //floor 1.2 rock
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,12,532,4,534,3,541,Color.black,1.5f); //1
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,3,541,8,545,18,540,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,18,540,22,534,18,531,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,18,531,14,530,12,532,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,63,479,70,475,82,476,Color.black,1.5f); //2
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,82,476,88,481,74,484,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,74,484,66,482,63,479,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,180,567,188,564,193,565,Color.black,1.5f); //3
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,565,200,568,208,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,208,567,210,571,208,574,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,208,574,177,573,180,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,254,546,256,540,261,540,Color.black,1.5f); //4
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,261,540,267,543,266,546,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,266,546,261,552,256,553,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,256,553,253,550,254,546,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,510,554,519,550,527,550,Color.black,1.5f); //5
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,550,535,557,529,559,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,529,559,524,561,517,561,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g,517,561,510,554,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g,515,504,501,502,Color.black,1.5f); //6
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,502,498,501,501,499,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,501,499,506,497,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,506,497,503,495,508,490,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,508,490,520,486,528,490,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,528,490,524,493,522,499,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,499,518,502,515,504,Color.black,1.5f);
+    //Floor    
+            //floor 1 line(left)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,406,31,406,50,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,405,69,403,68,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,403,80,404,86,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,86,403,94,402,100,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,403,108,402,118,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,403,125,402,135,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,135,405,155,405,Color.black,1.5f); //เชื่อม body
+            // floor 2 line(right)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,399,399,420,401,433,401,Color.black,1.5f); // เชื่อม body
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,433,401,454,400,470,397,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,470,397,484,393,496,394,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,496,394,512,393,522,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,395,559,394,575,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,395,587,397,600,396,Color.black,1.5f);
+            //floor 3 dirt
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,26,469,32,466,37,468,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,37,468,40,470,44,468,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,571,88,568,90,567,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,567,93,566,96,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,567,100,568,104,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,182,532,187,529,193,530,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,530,199,532,203,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,203,530,205,529,207,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,207,530,212,531,214,529,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,214,529,218,528,220,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,302,577,310,575,315,578,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,315,578,323,581,330,577,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,473,406,471,411,472,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,411,472,415,473,421,471,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,538,498,535,501,537,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,537,505,539,510,539,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,504,448,510,444,516,446,Color.black,1.5f); //7
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,446,523,447,528,446,Color.black,1.5f);
+            //floor 4 rock
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,526,48,522,52,517,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,52,517,61,513,75,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,513,81,519,79,524,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,524,64,526,53,526,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,95,436,90,434,92,431,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,92,431,104,427,109,429,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,429,112,431,111,434,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,434,105,435,95,436,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,497,513,493,511,495,508,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,508,500,506,509,506,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,506,516,510,515,516,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,516,509,517,497,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,559,424,553,422,553,420,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,553,420,559,417,572,419,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,572,419,576,422,573,424,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,573,424,568,425,559,424,Color.black,1.5f);
+            
+        // Tree 1
+            //1.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,225,20,238,38,225,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,225,51,238,69,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,69,225,80,241,108,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,108,225,121,238,141,228,Color.black,1.5f); //เชื่อม hair
+            //1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,104,0,114,8,111,25,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,25,130,28,132,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,132,45,147,61,144,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,82,160,85,167,105,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,167,105,180,109,183,135,Color.black,1.5f); //เชื่อม hair
+            //1.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,37,40,45,49,37,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,49,37,54,45,69,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,20,109,25,117,36,112,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,36,112,42,115,49,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,91,108,97,118,88,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,88,126,97,134,88,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,4,167,14,169,17,164,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,164,22,168,29,166,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,64,194,73,201,84,192,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,192,90,200,96,195,Color.black,1.5f);
+            //1.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,406,30,391,31,384,Color.black,1.5f); //เชื่อม floor1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,384,33,338,31,277,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,277,33,255,33,228,Color.black,1.5f); //เชื่อม 1.1 branch down
+            //1.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,80,404,76,321,80,234,Color.black,1.5f); //เชื่อม dirt1 + 1.1 branch down
+        //Tree 2
+            //2.1 branch down 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,235,425,248,440,244,Color.black,1.5f); //เชื่อม hair
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,466,244,476,255,493,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,247,504,255,516,244,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,244,531,256,544,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,576,242,585,252,600,238,Color.black,1.5f);
+            //2.2 branch left
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,0,465,8,464,22,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,464,22,440,34,447,42,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,447,42,430,52,425,70,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,70,403,81,403,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,106,387,116,392,134,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,392,134,375,137,364,154,Color.black,1.5f); //เชื่อม hair
+            //2.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,42,520,50,527,43,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,43,534,50,541,43,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,445,107,451,114,462,107,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,462,107,468,113,475,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,87,569,92,577,85,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,85,583,92,592,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,134,514,137,520,129,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,129,523,140,534,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,534,135,540,140,544,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,444,179,450,187,461,177,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,461,177,470,185,482,177,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,558,188,566,198,574,191,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,191,576,198,588,197,Color.black,1.5f);
+            //2.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,394,513,364,513,338,Color.black,1.5f); //เชื่อม คำ
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,513,338,513,309,514,289,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,514,289,513,267,513,247,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //2.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,560,394,559,356,561,329,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,329,561,288,566,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+        //Tree 3
+            //3.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,155,84,156,69,176,53,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,176,53,172,42,188,33,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,33,186,20,205,11,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,205,11,203,7,211,0,Color.black,1.5f);
+            //3.2 right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,333,0,350,16,345,31,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,345,31,365,34,363,57,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,363,57,377,57,371,80,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,371,80,387,81,386,104,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,104,393,105,396,110,Color.black,1.5f); //เชื่อม 2.2 branch left
+            //3.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,225,28,234,32,239,26,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,239,26,244,32,251,26,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,306,46,313,50,318,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,318,45,326,51,334,46,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,230,78,238,85,245,79,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,245,79,247,85,254,81,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,281,105,287,112,294,108,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,340,102,349,105,355,100,Color.black,1.5f);
+        //Tree 4
+            //4.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,123,27,127,18,139,14,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,139,14,137,5,150,0,Color.black,1.5f);
+            //4.2 right 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,179,0,186,3,188,10,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,10,196,7,200,13,Color.black,1.5f); //เชื่อม 3.1 branch left
+            //4.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,20,147,22,152,19,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,158,32,161,37,167,34,Color.black,1.5f);
+            //4.4 Trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,146,313,144,268,146,239,Color.black,1.5f); //เชื่อม hair+body
+            GraphicsUtilsPolygonOnly.drawLine(g,149,379,149,354,Color.black,1.5f); //เชื่อม body ล่าง
+            GraphicsUtilsPolygonOnly.drawLine(g,148,336,147,324,Color.black,1.5f); //เชื่อม body บน
+        //Tree 5
+            // 5.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,370,60,381,45,398,41,Color.black,1.5f); //เชื่อม 3.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,41,394,28,409,25,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,25,404,15,421,8,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,421,8,420,2,424,0,Color.black,1.5f);
+            // 5.2 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,427,20,435,22,440,17,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,62,390,65,395,62,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,395,62,398,66,403,61,Color.black,1.5f);   
+            //5.3 trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,450,400,448,344,448,309,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,448,309,452,275,452,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //5.4 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,394,488,258,488,328,Color.black,1.5f); //เชื่อม dirt2 + 2.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,488,328,487,301,487,285,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,285,487,265,487,251,Color.black,1.5f); //เชื่อม 2.1 branch down
+
+
             //body
             GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
             GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
@@ -7005,193 +7333,179 @@ static {
             Graphics2D g = image.createGraphics();
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
+          //Floor    
+            //floor 1 line(left)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,406,31,406,50,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,405,69,403,68,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,403,80,404,86,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,86,403,94,402,100,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,403,108,402,118,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,403,125,402,135,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,135,405,155,405,Color.black,1.5f); //เชื่อม body
+            // floor 2 line(right)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,399,399,420,401,433,401,Color.black,1.5f); // เชื่อม body
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,433,401,454,400,470,397,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,470,397,484,393,496,394,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,496,394,512,393,522,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,395,559,394,575,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,395,587,397,600,396,Color.black,1.5f);
+            //floor 3 dirt
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,26,469,32,466,37,468,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,37,468,40,470,44,468,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,571,88,568,90,567,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,567,93,566,96,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,567,100,568,104,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,182,532,187,529,193,530,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,530,199,532,203,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,203,530,205,529,207,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,207,530,212,531,214,529,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,214,529,218,528,220,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,302,577,310,575,315,578,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,315,578,323,581,330,577,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,473,406,471,411,472,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,411,472,415,473,421,471,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,538,498,535,501,537,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,537,505,539,510,539,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,504,448,510,444,516,446,Color.black,1.5f); //7
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,446,523,447,528,446,Color.black,1.5f);
+            //floor 4 rock
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,526,48,522,52,517,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,52,517,61,513,75,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,513,81,519,79,524,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,524,64,526,53,526,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,95,436,90,434,92,431,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,92,431,104,427,109,429,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,429,112,431,111,434,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,434,105,435,95,436,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,497,513,493,511,495,508,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,508,500,506,509,506,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,506,516,510,515,516,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,516,509,517,497,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,559,424,553,422,553,420,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,553,420,559,417,572,419,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,572,419,576,422,573,424,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,573,424,568,425,559,424,Color.black,1.5f);
             
-            //branch1.1 line(up)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,372,16,354,32,357,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,32,357,40,349,53,354,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,354,70,346,85,361,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,85,361,103,344,120,352,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,120,352,132,342,144,352,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,352,153,348,160,354,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,160,354,164,342,171,338,Color.black,1.5f); //เชื่อม
-            //branch1.2 line(down)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,448,8,459,17,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,454,28,460,35,452,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,35,452,43,462,56,452,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,56,452,67,462,76,456,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,76,456,82,464,97,460,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,97,460,105,462,113,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,113,454,126,460,134,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,134,454,144,464,163,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,163,454,172,462,181,456,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,181,456,193,460,200,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,200,454,206,459,211,457,Color.black,1.5f); //เชื่อม
-            //branch1.3 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,27,416,32,408,40,413,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,40,413,47,408,51,416,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,56,377,61,373,68,376,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,376,72,372,75,374,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,126,375,130,368,137,372,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,137,372,142,366,147,370,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,443,74,434,82,439,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,82,439,88,433,93,441,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,115,423,118,414,128,416,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,128,416,136,410,140,417,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,161,432,167,424,174,431,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,174,431,180,425,187,428,Color.black,1.5f);
-            //branch2.1 line
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,46,350,42,334,56,322,Color.black,1.5f);  //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,56,322,51,314,77,302,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,77,302,68,289,84,286,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,286,83,281,100,284,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,284,101,270,117,272,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,117,272,119,268,125,269,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawLine(g,0,334,46,334,Color.black,1.5f); //dirt   
-            //branch2.2 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,332,88,330,96,333,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,333,101,328,107,331,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,103,306,111,302,118,305,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,305,125,301,128,305,Color.black,1.5f);
-            //branch3.1 line(up)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,384,341,409,338,426,351,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,426,351,440,343,451,351,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,451,351,463,345,476,353,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,353,494,348,506,358,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,506,358,519,348,529,366,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,529,366,545,355,562,358,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,562,358,569,346,579,351,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,579,351,584,339,600,332,Color.black,1.5f);
-            //branch3.2 line(down)
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,357,454,373,463,379,458,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,379,458,398,464,409,453,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,453,425,464,438,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,438,454,445,463,457,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,457,454,469,464,483,458,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,483,458,494,467,509,456,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,456,522,463,536,453,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,536,453,549,463,557,458,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,557,458,569,467,575,461,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,461,587,470,597,454,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,597,454,598,462,600,466,Color.black,1.5f);
-            //branch3.3 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,385,373,392,368,398,373,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,373,403,370,406,373,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,420,395,412,403,418,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,418,410,412,412,418,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,429,398,435,391,443,398,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,443,398,453,388,459,395,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,484,382,490,379,495,382,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,382,503,379,503,384,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,490,432,498,425,503,430,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,430,508,426,512,430,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,550,411,557,401,564,407,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,564,407,570,399,575,403,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,568,437,577,432,580,437,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,580,437,586,432,590,435,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,373,583,368,588,373,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,588,373,595,367,598,371,Color.black,1.5f);
-            //branch4.1 up
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,265,449,267,454,277,Color.black,1.5f); //เชื่อม
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,454,277,464,267,481,270,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,481,270,499,261,508,272,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,508,272,521,265,526,272,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,526,272,536,267,552,274,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,552,274,560,266,575,270,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,270,588,261,600,265,Color.black,1.5f);
-            //branch4.2 leaf
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,437,316,443,311,452,316,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,452,316,459,309,463,316,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,480,289,487,285,491,289,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,289,495,285,499,287,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,507,331,514,326,521,331,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,521,331,526,327,530,331,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,528,297,534,290,544,293,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,293,550,288,556,293,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,322,579,312,585,315,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,585,315,591,310,595,313,Color.black,1.5f);
-            //cloud 1
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,47,6,44,17,44,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,44,24,35,42,47,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,42,47,63,35,75,46,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,46,100,40,115,62,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,115,62,125,56,137,65,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,137,65,162,83,150,92,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,150,92,143,110,115,113,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,115,113,97,122,78,114,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,78,114,60,125,38,118,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,118,17,127,0,114,Color.black,1.5f);
-            //cloud 2
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,294,19,296,8,320,8,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,320,8,335,1,351,8,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,351,8,377,1,388,12,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,12,402,10,415,19,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,19,419,27,410,27,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,410,27,410,42,381,40,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,381,40,371,50,351,45,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,351,45,339,50,332,40,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,332,40,314,45,305,31,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,305,31,284,27,294,19,Color.black,1.5f);
-            //cloud 3
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,600,75,595,63,585,68,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,585,68,567,60,568,63,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,568,63,559,67,555,75,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,555,75,547,67,542,75,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,542,75,526,71,515,85,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,85,499,88,505,99,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,505,99,490,101,487,109,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,109,490,120,509,117,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,117,515,126,536,120,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,536,120,542,128,557,121,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,557,121,576,123,581,112,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,581,112,594,116,600,110,Color.black,1.5f);
-            //floor 1.1 dirt
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,32,510,39,505,46,508,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,46,508,50,511,57,508,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g,57,508,72,508,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,40,565,50,560,57,565,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,57,565,60,570,63,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,63,567,68,565,73,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,543,126,535,136,537,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,136,537,144,539,151,537,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,151,537,160,535,174,537,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,180,498,208,496,218,506,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,298,570,305,568,311,571,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,311,571,317,574,325,572,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,344,498,355,492,361,496,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,361,496,367,496,369,492,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,369,492,374,490,379,492,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,379,492,385,494,391,492,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,560,432,560,439,557,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,439,557,447,557,454,561,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,519,528,516,546,517,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,554,487,564,485,573,485,Color.black,1.5f);
-            //floor 1.2 rock
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,12,532,4,534,3,541,Color.black,1.5f); //1
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,3,541,8,545,18,540,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,18,540,22,534,18,531,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,18,531,14,530,12,532,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,63,479,70,475,82,476,Color.black,1.5f); //2
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,82,476,88,481,74,484,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,74,484,66,482,63,479,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,180,567,188,564,193,565,Color.black,1.5f); //3
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,565,200,568,208,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,208,567,210,571,208,574,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,208,574,177,573,180,567,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,254,546,256,540,261,540,Color.black,1.5f); //4
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,261,540,267,543,266,546,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,266,546,261,552,256,553,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,256,553,253,550,254,546,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,510,554,519,550,527,550,Color.black,1.5f); //5
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,550,535,557,529,559,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,529,559,524,561,517,561,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g,517,561,510,554,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g,515,504,501,502,Color.black,1.5f); //6
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,502,498,501,501,499,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,501,499,506,497,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,506,497,503,495,508,490,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,508,490,520,486,528,490,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,528,490,524,493,522,499,Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,499,518,502,515,504,Color.black,1.5f);
+        // Tree 1
+            //1.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,225,20,238,38,225,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,225,51,238,69,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,69,225,80,241,108,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,108,225,121,238,141,228,Color.black,1.5f); //เชื่อม hair
+            //1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,104,0,114,8,111,25,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,25,130,28,132,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,132,45,147,61,144,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,82,160,85,167,105,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,167,105,180,109,183,135,Color.black,1.5f); //เชื่อม hair
+            //1.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,37,40,45,49,37,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,49,37,54,45,69,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,20,109,25,117,36,112,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,36,112,42,115,49,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,91,108,97,118,88,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,88,126,97,134,88,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,4,167,14,169,17,164,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,164,22,168,29,166,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,64,194,73,201,84,192,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,192,90,200,96,195,Color.black,1.5f);
+            //1.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,406,30,391,31,384,Color.black,1.5f); //เชื่อม floor1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,384,33,338,31,277,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,277,33,255,33,228,Color.black,1.5f); //เชื่อม 1.1 branch down
+            //1.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,80,404,76,321,80,234,Color.black,1.5f); //เชื่อม dirt1 + 1.1 branch down
+        //Tree 2
+            //2.1 branch down 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,235,425,248,440,244,Color.black,1.5f); //เชื่อม hair
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,466,244,476,255,493,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,247,504,255,516,244,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,244,531,256,544,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,576,242,585,252,600,238,Color.black,1.5f);
+            //2.2 branch left
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,0,465,8,464,22,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,464,22,440,34,447,42,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,447,42,430,52,425,70,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,70,403,81,403,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,106,387,116,392,134,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,392,134,375,137,364,154,Color.black,1.5f); //เชื่อม hair
+            //2.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,42,520,50,527,43,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,43,534,50,541,43,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,445,107,451,114,462,107,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,462,107,468,113,475,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,87,569,92,577,85,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,85,583,92,592,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,134,514,137,520,129,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,129,523,140,534,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,534,135,540,140,544,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,444,179,450,187,461,177,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,461,177,470,185,482,177,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,558,188,566,198,574,191,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,191,576,198,588,197,Color.black,1.5f);
+            //2.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,394,513,364,513,338,Color.black,1.5f); //เชื่อม คำ
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,513,338,513,309,514,289,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,514,289,513,267,513,247,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //2.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,560,394,559,356,561,329,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,329,561,288,566,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+        //Tree 3
+            //3.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,155,84,156,69,176,53,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,176,53,172,42,188,33,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,33,186,20,205,11,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,205,11,203,7,211,0,Color.black,1.5f);
+            //3.2 right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,333,0,350,16,345,31,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,345,31,365,34,363,57,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,363,57,377,57,371,80,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,371,80,387,81,386,104,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,104,393,105,396,110,Color.black,1.5f); //เชื่อม 2.2 branch left
+            //3.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,225,28,234,32,239,26,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,239,26,244,32,251,26,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,306,46,313,50,318,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,318,45,326,51,334,46,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,230,78,238,85,245,79,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,245,79,247,85,254,81,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,281,105,287,112,294,108,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,340,102,349,105,355,100,Color.black,1.5f);
+        //Tree 4
+            //4.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,123,27,127,18,139,14,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,139,14,137,5,150,0,Color.black,1.5f);
+            //4.2 right 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,179,0,186,3,188,10,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,10,196,7,200,13,Color.black,1.5f); //เชื่อม 3.1 branch left
+            //4.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,20,147,22,152,19,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,158,32,161,37,167,34,Color.black,1.5f);
+            //4.4 Trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,146,313,144,268,146,239,Color.black,1.5f); //เชื่อม hair+body
+            GraphicsUtilsPolygonOnly.drawLine(g,149,379,149,354,Color.black,1.5f); //เชื่อม body ล่าง
+            GraphicsUtilsPolygonOnly.drawLine(g,148,336,147,324,Color.black,1.5f); //เชื่อม body บน
+        //Tree 5
+            // 5.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,370,60,381,45,398,41,Color.black,1.5f); //เชื่อม 3.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,41,394,28,409,25,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,25,404,15,421,8,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,421,8,420,2,424,0,Color.black,1.5f);
+            // 5.2 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,427,20,435,22,440,17,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,62,390,65,395,62,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,395,62,398,66,403,61,Color.black,1.5f);   
+            //5.3 trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,450,400,448,344,448,309,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,448,309,452,275,452,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //5.4 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,394,488,258,488,328,Color.black,1.5f); //เชื่อม dirt2 + 2.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,488,328,487,301,487,285,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,285,487,265,487,251,Color.black,1.5f); //เชื่อม 2.1 branch down
+
+
             //body
             GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
             GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
@@ -7374,7 +7688,179 @@ static {
             Graphics2D g = image.createGraphics();
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
+         //Floor    
+            //floor 1 line(left)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,406,31,406,50,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,405,69,403,68,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,403,80,404,86,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,86,403,94,402,100,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,403,108,402,118,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,403,125,402,135,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,135,405,155,405,Color.black,1.5f); //เชื่อม body
+            // floor 2 line(right)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,399,399,420,401,433,401,Color.black,1.5f); // เชื่อม body
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,433,401,454,400,470,397,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,470,397,484,393,496,394,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,496,394,512,393,522,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,395,559,394,575,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,395,587,397,600,396,Color.black,1.5f);
+            //floor 3 dirt
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,26,469,32,466,37,468,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,37,468,40,470,44,468,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,571,88,568,90,567,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,567,93,566,96,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,567,100,568,104,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,182,532,187,529,193,530,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,530,199,532,203,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,203,530,205,529,207,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,207,530,212,531,214,529,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,214,529,218,528,220,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,302,577,310,575,315,578,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,315,578,323,581,330,577,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,473,406,471,411,472,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,411,472,415,473,421,471,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,538,498,535,501,537,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,537,505,539,510,539,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,504,448,510,444,516,446,Color.black,1.5f); //7
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,446,523,447,528,446,Color.black,1.5f);
+            //floor 4 rock
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,526,48,522,52,517,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,52,517,61,513,75,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,513,81,519,79,524,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,524,64,526,53,526,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,95,436,90,434,92,431,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,92,431,104,427,109,429,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,429,112,431,111,434,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,434,105,435,95,436,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,497,513,493,511,495,508,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,508,500,506,509,506,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,506,516,510,515,516,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,516,509,517,497,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,559,424,553,422,553,420,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,553,420,559,417,572,419,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,572,419,576,422,573,424,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,573,424,568,425,559,424,Color.black,1.5f);
             
+        // Tree 1
+            //1.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,225,20,238,38,225,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,225,51,238,69,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,69,225,80,241,108,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,108,225,121,238,141,228,Color.black,1.5f); //เชื่อม hair
+            //1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,104,0,114,8,111,25,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,25,130,28,132,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,132,45,147,61,144,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,82,160,85,167,105,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,167,105,180,109,183,135,Color.black,1.5f); //เชื่อม hair
+            //1.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,37,40,45,49,37,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,49,37,54,45,69,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,20,109,25,117,36,112,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,36,112,42,115,49,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,91,108,97,118,88,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,88,126,97,134,88,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,4,167,14,169,17,164,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,164,22,168,29,166,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,64,194,73,201,84,192,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,192,90,200,96,195,Color.black,1.5f);
+            //1.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,406,30,391,31,384,Color.black,1.5f); //เชื่อม floor1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,384,33,338,31,277,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,277,33,255,33,228,Color.black,1.5f); //เชื่อม 1.1 branch down
+            //1.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,80,404,76,321,80,234,Color.black,1.5f); //เชื่อม dirt1 + 1.1 branch down
+        //Tree 2
+            //2.1 branch down 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,235,425,248,440,244,Color.black,1.5f); //เชื่อม hair
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,466,244,476,255,493,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,247,504,255,516,244,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,244,531,256,544,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,576,242,585,252,600,238,Color.black,1.5f);
+            //2.2 branch left
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,0,465,8,464,22,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,464,22,440,34,447,42,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,447,42,430,52,425,70,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,70,403,81,403,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,106,387,116,392,134,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,392,134,375,137,364,154,Color.black,1.5f); //เชื่อม hair
+            //2.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,42,520,50,527,43,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,43,534,50,541,43,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,445,107,451,114,462,107,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,462,107,468,113,475,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,87,569,92,577,85,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,85,583,92,592,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,134,514,137,520,129,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,129,523,140,534,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,534,135,540,140,544,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,444,179,450,187,461,177,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,461,177,470,185,482,177,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,558,188,566,198,574,191,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,191,576,198,588,197,Color.black,1.5f);
+            //2.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,394,513,364,513,338,Color.black,1.5f); //เชื่อม คำ
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,513,338,513,309,514,289,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,514,289,513,267,513,247,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //2.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,560,394,559,356,561,329,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,329,561,288,566,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+        //Tree 3
+            //3.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,155,84,156,69,176,53,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,176,53,172,42,188,33,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,33,186,20,205,11,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,205,11,203,7,211,0,Color.black,1.5f);
+            //3.2 right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,333,0,350,16,345,31,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,345,31,365,34,363,57,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,363,57,377,57,371,80,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,371,80,387,81,386,104,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,104,393,105,396,110,Color.black,1.5f); //เชื่อม 2.2 branch left
+            //3.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,225,28,234,32,239,26,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,239,26,244,32,251,26,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,306,46,313,50,318,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,318,45,326,51,334,46,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,230,78,238,85,245,79,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,245,79,247,85,254,81,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,281,105,287,112,294,108,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,340,102,349,105,355,100,Color.black,1.5f);
+        //Tree 4
+            //4.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,123,27,127,18,139,14,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,139,14,137,5,150,0,Color.black,1.5f);
+            //4.2 right 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,179,0,186,3,188,10,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,10,196,7,200,13,Color.black,1.5f); //เชื่อม 3.1 branch left
+            //4.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,20,147,22,152,19,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,158,32,161,37,167,34,Color.black,1.5f);
+            //4.4 Trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,146,313,144,268,146,239,Color.black,1.5f); //เชื่อม hair+body
+            GraphicsUtilsPolygonOnly.drawLine(g,149,379,149,354,Color.black,1.5f); //เชื่อม body ล่าง
+            GraphicsUtilsPolygonOnly.drawLine(g,148,336,147,324,Color.black,1.5f); //เชื่อม body บน
+        //Tree 5
+            // 5.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,370,60,381,45,398,41,Color.black,1.5f); //เชื่อม 3.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,41,394,28,409,25,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,25,404,15,421,8,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,421,8,420,2,424,0,Color.black,1.5f);
+            // 5.2 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,427,20,435,22,440,17,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,62,390,65,395,62,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,395,62,398,66,403,61,Color.black,1.5f);   
+            //5.3 trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,450,400,448,344,448,309,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,448,309,452,275,452,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //5.4 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,394,488,258,488,328,Color.black,1.5f); //เชื่อม dirt2 + 2.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,488,328,487,301,487,285,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,285,487,265,487,251,Color.black,1.5f); //เชื่อม 2.1 branch down
+
+
             //body
             GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
             GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
@@ -7558,7 +8044,179 @@ static {
             Graphics2D g = image.createGraphics();
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
+          //Floor    
+            //floor 1 line(left)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,406,31,406,50,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,405,69,403,68,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,403,80,404,86,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,86,403,94,402,100,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,403,108,402,118,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,403,125,402,135,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,135,405,155,405,Color.black,1.5f); //เชื่อม body
+            // floor 2 line(right)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,399,399,420,401,433,401,Color.black,1.5f); // เชื่อม body
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,433,401,454,400,470,397,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,470,397,484,393,496,394,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,496,394,512,393,522,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,395,559,394,575,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,395,587,397,600,396,Color.black,1.5f);
+            //floor 3 dirt
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,26,469,32,466,37,468,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,37,468,40,470,44,468,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,571,88,568,90,567,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,567,93,566,96,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,567,100,568,104,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,182,532,187,529,193,530,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,530,199,532,203,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,203,530,205,529,207,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,207,530,212,531,214,529,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,214,529,218,528,220,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,302,577,310,575,315,578,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,315,578,323,581,330,577,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,473,406,471,411,472,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,411,472,415,473,421,471,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,538,498,535,501,537,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,537,505,539,510,539,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,504,448,510,444,516,446,Color.black,1.5f); //7
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,446,523,447,528,446,Color.black,1.5f);
+            //floor 4 rock
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,526,48,522,52,517,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,52,517,61,513,75,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,513,81,519,79,524,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,524,64,526,53,526,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,95,436,90,434,92,431,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,92,431,104,427,109,429,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,429,112,431,111,434,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,434,105,435,95,436,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,497,513,493,511,495,508,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,508,500,506,509,506,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,506,516,510,515,516,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,516,509,517,497,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,559,424,553,422,553,420,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,553,420,559,417,572,419,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,572,419,576,422,573,424,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,573,424,568,425,559,424,Color.black,1.5f);
             
+        // Tree 1
+            //1.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,225,20,238,38,225,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,225,51,238,69,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,69,225,80,241,108,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,108,225,121,238,141,228,Color.black,1.5f); //เชื่อม hair
+            //1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,104,0,114,8,111,25,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,25,130,28,132,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,132,45,147,61,144,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,82,160,85,167,105,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,167,105,180,109,183,135,Color.black,1.5f); //เชื่อม hair
+            //1.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,37,40,45,49,37,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,49,37,54,45,69,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,20,109,25,117,36,112,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,36,112,42,115,49,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,91,108,97,118,88,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,88,126,97,134,88,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,4,167,14,169,17,164,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,164,22,168,29,166,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,64,194,73,201,84,192,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,192,90,200,96,195,Color.black,1.5f);
+            //1.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,406,30,391,31,384,Color.black,1.5f); //เชื่อม floor1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,384,33,338,31,277,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,277,33,255,33,228,Color.black,1.5f); //เชื่อม 1.1 branch down
+            //1.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,80,404,76,321,80,234,Color.black,1.5f); //เชื่อม dirt1 + 1.1 branch down
+        //Tree 2
+            //2.1 branch down 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,235,425,248,440,244,Color.black,1.5f); //เชื่อม hair
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,466,244,476,255,493,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,247,504,255,516,244,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,244,531,256,544,247,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,576,242,585,252,600,238,Color.black,1.5f);
+            //2.2 branch left
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,0,465,8,464,22,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,464,22,440,34,447,42,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,447,42,430,52,425,70,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,70,403,81,403,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,106,387,116,392,134,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,392,134,375,137,364,154,Color.black,1.5f); //เชื่อม hair
+            //2.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,42,520,50,527,43,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,43,534,50,541,43,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,445,107,451,114,462,107,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,462,107,468,113,475,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,87,569,92,577,85,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,85,583,92,592,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,134,514,137,520,129,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,129,523,140,534,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,534,135,540,140,544,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,444,179,450,187,461,177,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,461,177,470,185,482,177,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,558,188,566,198,574,191,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,191,576,198,588,197,Color.black,1.5f);
+            //2.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,394,513,364,513,338,Color.black,1.5f); //เชื่อม คำ
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,513,338,513,309,514,289,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,514,289,513,267,513,247,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //2.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,560,394,559,356,561,329,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,329,561,288,566,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+        //Tree 3
+            //3.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,155,84,156,69,176,53,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,176,53,172,42,188,33,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,33,186,20,205,11,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,205,11,203,7,211,0,Color.black,1.5f);
+            //3.2 right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,333,0,350,16,345,31,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,345,31,365,34,363,57,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,363,57,377,57,371,80,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,371,80,387,81,386,104,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,104,393,105,396,110,Color.black,1.5f); //เชื่อม 2.2 branch left
+            //3.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,225,28,234,32,239,26,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,239,26,244,32,251,26,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,306,46,313,50,318,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,318,45,326,51,334,46,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,230,78,238,85,245,79,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,245,79,247,85,254,81,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,281,105,287,112,294,108,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,340,102,349,105,355,100,Color.black,1.5f);
+        //Tree 4
+            //4.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,123,27,127,18,139,14,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,139,14,137,5,150,0,Color.black,1.5f);
+            //4.2 right 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,179,0,186,3,188,10,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,10,196,7,200,13,Color.black,1.5f); //เชื่อม 3.1 branch left
+            //4.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,20,147,22,152,19,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,158,32,161,37,167,34,Color.black,1.5f);
+            //4.4 Trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,146,313,144,268,146,239,Color.black,1.5f); //เชื่อม hair+body
+            GraphicsUtilsPolygonOnly.drawLine(g,149,379,149,354,Color.black,1.5f); //เชื่อม body ล่าง
+            GraphicsUtilsPolygonOnly.drawLine(g,148,336,147,324,Color.black,1.5f); //เชื่อม body บน
+        //Tree 5
+            // 5.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,370,60,381,45,398,41,Color.black,1.5f); //เชื่อม 3.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,41,394,28,409,25,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,25,404,15,421,8,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,421,8,420,2,424,0,Color.black,1.5f);
+            // 5.2 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,427,20,435,22,440,17,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,62,390,65,395,62,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,395,62,398,66,403,61,Color.black,1.5f);   
+            //5.3 trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,450,400,448,344,448,309,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,448,309,452,275,452,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //5.4 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,394,488,258,488,328,Color.black,1.5f); //เชื่อม dirt2 + 2.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,488,328,487,301,487,285,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,487,285,487,265,487,251,Color.black,1.5f); //เชื่อม 2.1 branch down
+
+
             //body
             GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
             GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
@@ -8169,190 +8827,7 @@ static {
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
             
             GraphicsUtilsPolygonOnly.fillCircle(g, 300, 300, 100, Color.black);
-            //body
-            GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 171, 320, 131, 346, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 346, 175, 363, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 166, 359, 131, 395, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 395, 177, 415, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 177, 415, 158, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 158, 445, 188, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 188, 445, 181, 475, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 181, 475, 224, 461, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 224, 461, 219, 494, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 219, 494, 254, 485, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 254, 485, 282, 499, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 489, 282, 514, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 514, 318, 491, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 313, 489, 353, 504, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 353, 504, 351, 472, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 351, 479, 358, 472, 360, 463, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 351, 463, 401, 463, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 401, 463, 406, 455, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 406, 455, 388, 433, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 396, 427, 403, 437, 396, 442, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 379, 423, 412, 430, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 412, 430, 399, 395, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 399, 395, 438, 377, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 438, 377, 409, 356, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 409, 356, 422, 353, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 422, 353, 411, 341, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 407, 344, 435, 323, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 435, 323, 402, 306, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 197, 342, 186, 346, 199, 363, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 188, 378, 175, 389, 189, 399, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 236, 413, 231, 440, 259, 422, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 395, 321, 409, 326, 395, 338, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 379, 351, 394, 376, 368, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 405, 371, 430, 335, 435, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 458, 302, 482, 322, 455, Color.black,2f);
-
-            //hairband 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 160, 258, 160, 284, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 394, 245, 407, 276, 402, 306, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 402, 306, 394, 313, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 394, 313, 325, 318, Color.black, 2f);
-            
-            GraphicsUtilsPolygonOnly.drawLine(g, 325, 318, 300, 301, Color.black, 2f);
-
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 362, 299, 402, 306, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 308, 280, 324, 253, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 324, 253, 358, 246, 391, 251, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 391, 251, 402, 277, 402, 306, Color.black,2f);
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,325,318,340,276,392,274,402,306,Color.black,2f);
-
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 300, 301, 281, 320, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 281, 320, 204, 318, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 160, 258, 168, 253, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 253, 394, 245, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 291, 284, Color.white, Color.decode("#18191E"), 200);
-
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g, 330, 302, 323, 283, 337, 266, 357, 260,Color.decode("#6A6F81") , 2f);
-            // GraphicsUtilsPolygonOnly.drawLine(g, 357, 260, 373, 266, Color.decode("#6A6F81"), 2f);
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 266, 346, 277, 330, 302, Color.decode("#6A6F81"),2f);
-            // GraphicsUtilsPolygonOnly.floodFill(image, 338, 276, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 261, 299, 256, 303, 243, 308, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 243, 308, 262, 307, 261, 299, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 249, 307, 258, 305, 260, 302, Color.decode("#6A6F81"),4f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 203, 272, 236, 272, 262, 289, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 262, 289, 259, 275, 237, 258, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 258, 216, 262, 203, 272, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 240, 267, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            //hair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 399, 257, 418, 231, 428, 204, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 428, 204, 397, 231, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 397, 231, 418, 190, 429, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 429, 154, 389, 197, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 389, 197, 397, 165, 413, 138, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 413, 138, 382, 158, 356, 185, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 356, 185, 367, 147, 359, 101, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 359, 101, 348, 136, 320, 169, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 320, 169, 331, 134, 308, 84, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 84, 301, 121, 278, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 179, 278, 154, 274, 131, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 274, 131, 253, 91, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 253, 91, 252, 139, 234, 175, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 181, 234, 175, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 234, 175, 212, 139, 204, 87, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 204, 87, 190, 112, 180, 147, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 180, 147, 180, 181, 190, 201, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 190, 201, 168, 185, 148, 149, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 148, 149, 153, 201, 168, 231, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 168, 231, 148, 217, 128, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 128, 189, 144, 241, 160, 271, Color.black,2f);
-
-            
-            
-            //insidehair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 215, 251, 192, 233, 180, 210, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 222, 251, 204, 220, 203, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 249, 289, 229, 298, 190, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 248, 328, 236, 344, 220, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 340, 247, 359, 231, 368, 214, Color.black,2f);
-            
-            //haircolorinside 
-            GraphicsUtilsPolygonOnly.drawLine(g, 145, 241, 144, 220, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 144, 220, 168, 231,  Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 231, 168, 203, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 203, 182, 215, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 177, 239, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 208, 184, 217, 214, 241, 234,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 203, 189, 208, 184, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 234, 237, 199, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 199, 249, 229, 274, 247,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 233, 241, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 190, 316, 221, 316, 243,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 303, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 344, 220, 354, 235, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 343, 235, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 362, 226, 387, 210, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 387, 210, 399, 226, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 379, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 210, 247, 206, 236, 206, 220,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 212, 244, Color.white, Color.decode("#BCC5F3"), 60);
-            //leg
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 217, 463, 212, 491, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 214, 522, 204, 518, 195, 525, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 195, 525, 204, 530, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 204, 523, Color.white, Color.black, 230);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 368, 463, 379, 495, 373, 528, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 528, 387, 518, 398, 531, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 398, 531, 373, 528, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 386, 527, Color.white, Color.black, 230);
-            
-            //mouse 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 265, 371, 296, 374, 339, 363, Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 291, 386, 305, 384, Color.black, 1f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 272, 371, 294, 379, 329, 365, Color.black,1.5f);
-
-            //colorbody 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 355, 317, 287, 379, 171, 443, Color.decode("#68ED5F"),1.5f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 252, 361, Color.white, Color.decode("#98EF92"), 70);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 430, 372, 377, 393, 341, 439, Color.decode("#40C737"),1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 341, 439, 221, 481, Color.decode("#40C737"), 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 308, 421, Color.white, Color.decode("#68ED5F"), 105);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 335, 473, Color.white, Color.decode("#40C737"), 108);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 424, Color.white, Color.decode("#40C737"), 180);
-            //arms 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 143, 351, 103, 425, 221, 390, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 217, 374, 224, 353, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 224, 353, 227, 365, 221, 390, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 227, 378, 234, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 234, 384, 221, 390, Color.black, 4f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 221, 372, Color.decode("#98EF92"), Color.black, 180);
-            
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 422, 353, 478, 390, 391, 251, Color.black,2f);
-            
-            //eyes
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,344,289,353,306,382,306,394,282,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,282,30,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,278,15,Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 295, Color.white, Color.decode("#2EFBFF"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 275, Color.white, Color.decode("#000131"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 333, 305, Color.white, Color.decode("#98EF92"), 10);
-            
+           
 
         };
     }
@@ -8364,188 +8839,6 @@ static {
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
             
             GraphicsUtilsPolygonOnly.fillCircle(g, 300, 300, 150, Color.black);
-            GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 171, 320, 131, 346, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 346, 175, 363, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 166, 359, 131, 395, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 395, 177, 415, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 177, 415, 158, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 158, 445, 188, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 188, 445, 181, 475, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 181, 475, 224, 461, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 224, 461, 219, 494, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 219, 494, 254, 485, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 254, 485, 282, 499, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 489, 282, 514, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 514, 318, 491, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 313, 489, 353, 504, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 353, 504, 351, 472, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 351, 479, 358, 472, 360, 463, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 351, 463, 401, 463, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 401, 463, 406, 455, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 406, 455, 388, 433, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 396, 427, 403, 437, 396, 442, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 379, 423, 412, 430, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 412, 430, 399, 395, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 399, 395, 438, 377, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 438, 377, 409, 356, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 409, 356, 422, 353, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 422, 353, 411, 341, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 407, 344, 435, 323, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 435, 323, 402, 306, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 197, 342, 186, 346, 199, 363, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 188, 378, 175, 389, 189, 399, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 236, 413, 231, 440, 259, 422, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 395, 321, 409, 326, 395, 338, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 379, 351, 394, 376, 368, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 405, 371, 430, 335, 435, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 458, 302, 482, 322, 455, Color.black,2f);
-
-            //hairband 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 160, 258, 160, 284, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 394, 245, 407, 276, 402, 306, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 402, 306, 394, 313, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 394, 313, 325, 318, Color.black, 2f);
-            
-            GraphicsUtilsPolygonOnly.drawLine(g, 325, 318, 300, 301, Color.black, 2f);
-
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 362, 299, 402, 306, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 308, 280, 324, 253, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 324, 253, 358, 246, 391, 251, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 391, 251, 402, 277, 402, 306, Color.black,2f);
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,325,318,340,276,392,274,402,306,Color.black,2f);
-
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 300, 301, 281, 320, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 281, 320, 204, 318, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 160, 258, 168, 253, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 253, 394, 245, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 291, 284, Color.white, Color.decode("#18191E"), 200);
-
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g, 330, 302, 323, 283, 337, 266, 357, 260,Color.decode("#6A6F81") , 2f);
-            // GraphicsUtilsPolygonOnly.drawLine(g, 357, 260, 373, 266, Color.decode("#6A6F81"), 2f);
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 266, 346, 277, 330, 302, Color.decode("#6A6F81"),2f);
-            // GraphicsUtilsPolygonOnly.floodFill(image, 338, 276, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 261, 299, 256, 303, 243, 308, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 243, 308, 262, 307, 261, 299, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 249, 307, 258, 305, 260, 302, Color.decode("#6A6F81"),4f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 203, 272, 236, 272, 262, 289, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 262, 289, 259, 275, 237, 258, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 258, 216, 262, 203, 272, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 240, 267, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            //hair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 399, 257, 418, 231, 428, 204, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 428, 204, 397, 231, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 397, 231, 418, 190, 429, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 429, 154, 389, 197, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 389, 197, 397, 165, 413, 138, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 413, 138, 382, 158, 356, 185, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 356, 185, 367, 147, 359, 101, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 359, 101, 348, 136, 320, 169, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 320, 169, 331, 134, 308, 84, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 84, 301, 121, 278, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 179, 278, 154, 274, 131, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 274, 131, 253, 91, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 253, 91, 252, 139, 234, 175, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 181, 234, 175, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 234, 175, 212, 139, 204, 87, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 204, 87, 190, 112, 180, 147, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 180, 147, 180, 181, 190, 201, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 190, 201, 168, 185, 148, 149, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 148, 149, 153, 201, 168, 231, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 168, 231, 148, 217, 128, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 128, 189, 144, 241, 160, 271, Color.black,2f);
-
-            
-            
-            //insidehair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 215, 251, 192, 233, 180, 210, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 222, 251, 204, 220, 203, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 249, 289, 229, 298, 190, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 248, 328, 236, 344, 220, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 340, 247, 359, 231, 368, 214, Color.black,2f);
-            
-            //haircolorinside 
-            GraphicsUtilsPolygonOnly.drawLine(g, 145, 241, 144, 220, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 144, 220, 168, 231,  Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 231, 168, 203, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 203, 182, 215, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 177, 239, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 208, 184, 217, 214, 241, 234,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 203, 189, 208, 184, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 234, 237, 199, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 199, 249, 229, 274, 247,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 233, 241, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 190, 316, 221, 316, 243,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 303, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 344, 220, 354, 235, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 343, 235, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 362, 226, 387, 210, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 387, 210, 399, 226, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 379, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 210, 247, 206, 236, 206, 220,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 212, 244, Color.white, Color.decode("#BCC5F3"), 60);
-            //leg
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 217, 463, 212, 491, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 214, 522, 204, 518, 195, 525, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 195, 525, 204, 530, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 204, 523, Color.white, Color.black, 230);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 368, 463, 379, 495, 373, 528, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 528, 387, 518, 398, 531, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 398, 531, 373, 528, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 386, 527, Color.white, Color.black, 230);
-            
-            //mouse 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 265, 371, 296, 374, 339, 363, Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 291, 386, 305, 384, Color.black, 1f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 272, 371, 294, 379, 329, 365, Color.black,1.5f);
-
-            //colorbody 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 355, 317, 287, 379, 171, 443, Color.decode("#68ED5F"),1.5f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 252, 361, Color.white, Color.decode("#98EF92"), 70);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 430, 372, 377, 393, 341, 439, Color.decode("#40C737"),1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 341, 439, 221, 481, Color.decode("#40C737"), 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 308, 421, Color.white, Color.decode("#68ED5F"), 105);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 335, 473, Color.white, Color.decode("#40C737"), 108);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 424, Color.white, Color.decode("#40C737"), 180);
-            //arms 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 143, 351, 103, 425, 221, 390, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 217, 374, 224, 353, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 224, 353, 227, 365, 221, 390, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 227, 378, 234, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 234, 384, 221, 390, Color.black, 4f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 221, 372, Color.decode("#98EF92"), Color.black, 180);
-            
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 422, 353, 478, 390, 391, 251, Color.black,2f);
-            
-            //eyes
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,344,289,353,306,382,306,394,282,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,282,30,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,278,15,Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 295, Color.white, Color.decode("#2EFBFF"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 275, Color.white, Color.decode("#000131"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 333, 305, Color.white, Color.decode("#98EF92"), 10);
             
 
         };
@@ -8557,188 +8850,6 @@ static {
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
             
             GraphicsUtilsPolygonOnly.fillCircle(g, 300, 300, 200, Color.black);
-            GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 171, 320, 131, 346, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 346, 175, 363, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 166, 359, 131, 395, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 395, 177, 415, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 177, 415, 158, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 158, 445, 188, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 188, 445, 181, 475, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 181, 475, 224, 461, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 224, 461, 219, 494, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 219, 494, 254, 485, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 254, 485, 282, 499, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 489, 282, 514, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 514, 318, 491, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 313, 489, 353, 504, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 353, 504, 351, 472, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 351, 479, 358, 472, 360, 463, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 351, 463, 401, 463, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 401, 463, 406, 455, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 406, 455, 388, 433, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 396, 427, 403, 437, 396, 442, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 379, 423, 412, 430, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 412, 430, 399, 395, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 399, 395, 438, 377, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 438, 377, 409, 356, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 409, 356, 422, 353, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 422, 353, 411, 341, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 407, 344, 435, 323, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 435, 323, 402, 306, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 197, 342, 186, 346, 199, 363, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 188, 378, 175, 389, 189, 399, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 236, 413, 231, 440, 259, 422, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 395, 321, 409, 326, 395, 338, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 379, 351, 394, 376, 368, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 405, 371, 430, 335, 435, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 458, 302, 482, 322, 455, Color.black,2f);
-
-            //hairband 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 160, 258, 160, 284, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 394, 245, 407, 276, 402, 306, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 402, 306, 394, 313, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 394, 313, 325, 318, Color.black, 2f);
-            
-            GraphicsUtilsPolygonOnly.drawLine(g, 325, 318, 300, 301, Color.black, 2f);
-
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 362, 299, 402, 306, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 308, 280, 324, 253, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 324, 253, 358, 246, 391, 251, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 391, 251, 402, 277, 402, 306, Color.black,2f);
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,325,318,340,276,392,274,402,306,Color.black,2f);
-
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 300, 301, 281, 320, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 281, 320, 204, 318, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 160, 258, 168, 253, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 253, 394, 245, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 291, 284, Color.white, Color.decode("#18191E"), 200);
-
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g, 330, 302, 323, 283, 337, 266, 357, 260,Color.decode("#6A6F81") , 2f);
-            // GraphicsUtilsPolygonOnly.drawLine(g, 357, 260, 373, 266, Color.decode("#6A6F81"), 2f);
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 266, 346, 277, 330, 302, Color.decode("#6A6F81"),2f);
-            // GraphicsUtilsPolygonOnly.floodFill(image, 338, 276, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 261, 299, 256, 303, 243, 308, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 243, 308, 262, 307, 261, 299, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 249, 307, 258, 305, 260, 302, Color.decode("#6A6F81"),4f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 203, 272, 236, 272, 262, 289, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 262, 289, 259, 275, 237, 258, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 258, 216, 262, 203, 272, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 240, 267, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            //hair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 399, 257, 418, 231, 428, 204, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 428, 204, 397, 231, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 397, 231, 418, 190, 429, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 429, 154, 389, 197, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 389, 197, 397, 165, 413, 138, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 413, 138, 382, 158, 356, 185, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 356, 185, 367, 147, 359, 101, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 359, 101, 348, 136, 320, 169, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 320, 169, 331, 134, 308, 84, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 84, 301, 121, 278, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 179, 278, 154, 274, 131, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 274, 131, 253, 91, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 253, 91, 252, 139, 234, 175, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 181, 234, 175, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 234, 175, 212, 139, 204, 87, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 204, 87, 190, 112, 180, 147, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 180, 147, 180, 181, 190, 201, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 190, 201, 168, 185, 148, 149, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 148, 149, 153, 201, 168, 231, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 168, 231, 148, 217, 128, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 128, 189, 144, 241, 160, 271, Color.black,2f);
-
-            
-            
-            //insidehair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 215, 251, 192, 233, 180, 210, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 222, 251, 204, 220, 203, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 249, 289, 229, 298, 190, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 248, 328, 236, 344, 220, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 340, 247, 359, 231, 368, 214, Color.black,2f);
-            
-            //haircolorinside 
-            GraphicsUtilsPolygonOnly.drawLine(g, 145, 241, 144, 220, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 144, 220, 168, 231,  Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 231, 168, 203, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 203, 182, 215, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 177, 239, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 208, 184, 217, 214, 241, 234,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 203, 189, 208, 184, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 234, 237, 199, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 199, 249, 229, 274, 247,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 233, 241, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 190, 316, 221, 316, 243,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 303, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 344, 220, 354, 235, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 343, 235, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 362, 226, 387, 210, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 387, 210, 399, 226, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 379, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 210, 247, 206, 236, 206, 220,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 212, 244, Color.white, Color.decode("#BCC5F3"), 60);
-            //leg
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 217, 463, 212, 491, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 214, 522, 204, 518, 195, 525, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 195, 525, 204, 530, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 204, 523, Color.white, Color.black, 230);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 368, 463, 379, 495, 373, 528, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 528, 387, 518, 398, 531, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 398, 531, 373, 528, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 386, 527, Color.white, Color.black, 230);
-            
-            //mouse 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 265, 371, 296, 374, 339, 363, Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 291, 386, 305, 384, Color.black, 1f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 272, 371, 294, 379, 329, 365, Color.black,1.5f);
-
-            //colorbody 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 355, 317, 287, 379, 171, 443, Color.decode("#68ED5F"),1.5f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 252, 361, Color.white, Color.decode("#98EF92"), 70);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 430, 372, 377, 393, 341, 439, Color.decode("#40C737"),1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 341, 439, 221, 481, Color.decode("#40C737"), 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 308, 421, Color.white, Color.decode("#68ED5F"), 105);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 335, 473, Color.white, Color.decode("#40C737"), 108);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 424, Color.white, Color.decode("#40C737"), 180);
-            //arms 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 143, 351, 103, 425, 221, 390, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 217, 374, 224, 353, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 224, 353, 227, 365, 221, 390, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 227, 378, 234, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 234, 384, 221, 390, Color.black, 4f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 221, 372, Color.decode("#98EF92"), Color.black, 180);
-            
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 422, 353, 478, 390, 391, 251, Color.black,2f);
-            
-            //eyes
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,344,289,353,306,382,306,394,282,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,282,30,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,278,15,Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 295, Color.white, Color.decode("#2EFBFF"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 275, Color.white, Color.decode("#000131"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 333, 305, Color.white, Color.decode("#98EF92"), 10);
             
 
         };
@@ -8751,189 +8862,6 @@ static {
             
             GraphicsUtilsPolygonOnly.fillCircle(g, 300, 300, 225, Color.black);
 
-            GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 171, 320, 131, 346, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 346, 175, 363, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 166, 359, 131, 395, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 395, 177, 415, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 177, 415, 158, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 158, 445, 188, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 188, 445, 181, 475, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 181, 475, 224, 461, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 224, 461, 219, 494, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 219, 494, 254, 485, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 254, 485, 282, 499, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 489, 282, 514, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 514, 318, 491, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 313, 489, 353, 504, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 353, 504, 351, 472, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 351, 479, 358, 472, 360, 463, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 351, 463, 401, 463, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 401, 463, 406, 455, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 406, 455, 388, 433, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 396, 427, 403, 437, 396, 442, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 379, 423, 412, 430, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 412, 430, 399, 395, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 399, 395, 438, 377, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 438, 377, 409, 356, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 409, 356, 422, 353, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 422, 353, 411, 341, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 407, 344, 435, 323, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 435, 323, 402, 306, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 197, 342, 186, 346, 199, 363, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 188, 378, 175, 389, 189, 399, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 236, 413, 231, 440, 259, 422, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 395, 321, 409, 326, 395, 338, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 379, 351, 394, 376, 368, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 405, 371, 430, 335, 435, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 458, 302, 482, 322, 455, Color.black,2f);
-
-            //hairband 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 160, 258, 160, 284, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 394, 245, 407, 276, 402, 306, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 402, 306, 394, 313, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 394, 313, 325, 318, Color.black, 2f);
-            
-            GraphicsUtilsPolygonOnly.drawLine(g, 325, 318, 300, 301, Color.black, 2f);
-
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 362, 299, 402, 306, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 308, 280, 324, 253, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 324, 253, 358, 246, 391, 251, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 391, 251, 402, 277, 402, 306, Color.black,2f);
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,325,318,340,276,392,274,402,306,Color.black,2f);
-
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 300, 301, 281, 320, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 281, 320, 204, 318, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 160, 258, 168, 253, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 253, 394, 245, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 291, 284, Color.white, Color.decode("#18191E"), 200);
-
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g, 330, 302, 323, 283, 337, 266, 357, 260,Color.decode("#6A6F81") , 2f);
-            // GraphicsUtilsPolygonOnly.drawLine(g, 357, 260, 373, 266, Color.decode("#6A6F81"), 2f);
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 266, 346, 277, 330, 302, Color.decode("#6A6F81"),2f);
-            // GraphicsUtilsPolygonOnly.floodFill(image, 338, 276, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 261, 299, 256, 303, 243, 308, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 243, 308, 262, 307, 261, 299, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 249, 307, 258, 305, 260, 302, Color.decode("#6A6F81"),4f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 203, 272, 236, 272, 262, 289, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 262, 289, 259, 275, 237, 258, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 258, 216, 262, 203, 272, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 240, 267, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            //hair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 399, 257, 418, 231, 428, 204, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 428, 204, 397, 231, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 397, 231, 418, 190, 429, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 429, 154, 389, 197, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 389, 197, 397, 165, 413, 138, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 413, 138, 382, 158, 356, 185, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 356, 185, 367, 147, 359, 101, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 359, 101, 348, 136, 320, 169, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 320, 169, 331, 134, 308, 84, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 84, 301, 121, 278, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 179, 278, 154, 274, 131, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 274, 131, 253, 91, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 253, 91, 252, 139, 234, 175, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 181, 234, 175, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 234, 175, 212, 139, 204, 87, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 204, 87, 190, 112, 180, 147, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 180, 147, 180, 181, 190, 201, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 190, 201, 168, 185, 148, 149, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 148, 149, 153, 201, 168, 231, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 168, 231, 148, 217, 128, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 128, 189, 144, 241, 160, 271, Color.black,2f);
-
-            
-            
-            //insidehair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 215, 251, 192, 233, 180, 210, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 222, 251, 204, 220, 203, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 249, 289, 229, 298, 190, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 248, 328, 236, 344, 220, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 340, 247, 359, 231, 368, 214, Color.black,2f);
-            
-            //haircolorinside 
-            GraphicsUtilsPolygonOnly.drawLine(g, 145, 241, 144, 220, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 144, 220, 168, 231,  Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 231, 168, 203, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 203, 182, 215, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 177, 239, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 208, 184, 217, 214, 241, 234,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 203, 189, 208, 184, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 234, 237, 199, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 199, 249, 229, 274, 247,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 233, 241, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 190, 316, 221, 316, 243,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 303, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 344, 220, 354, 235, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 343, 235, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 362, 226, 387, 210, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 387, 210, 399, 226, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 379, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 210, 247, 206, 236, 206, 220,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 212, 244, Color.white, Color.decode("#BCC5F3"), 60);
-            //leg
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 217, 463, 212, 491, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 214, 522, 204, 518, 195, 525, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 195, 525, 204, 530, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 204, 523, Color.white, Color.black, 230);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 368, 463, 379, 495, 373, 528, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 528, 387, 518, 398, 531, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 398, 531, 373, 528, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 386, 527, Color.white, Color.black, 230);
-            
-            //mouse 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 265, 371, 296, 374, 339, 363, Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 291, 386, 305, 384, Color.black, 1f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 272, 371, 294, 379, 329, 365, Color.black,1.5f);
-
-            //colorbody 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 355, 317, 287, 379, 171, 443, Color.decode("#68ED5F"),1.5f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 252, 361, Color.white, Color.decode("#98EF92"), 70);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 430, 372, 377, 393, 341, 439, Color.decode("#40C737"),1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 341, 439, 221, 481, Color.decode("#40C737"), 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 308, 421, Color.white, Color.decode("#68ED5F"), 105);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 335, 473, Color.white, Color.decode("#40C737"), 108);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 424, Color.white, Color.decode("#40C737"), 180);
-            //arms 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 143, 351, 103, 425, 221, 390, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 217, 374, 224, 353, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 224, 353, 227, 365, 221, 390, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 227, 378, 234, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 234, 384, 221, 390, Color.black, 4f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 221, 372, Color.decode("#98EF92"), Color.black, 180);
-            
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 422, 353, 478, 390, 391, 251, Color.black,2f);
-            
-            //eyes
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,344,289,353,306,382,306,394,282,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,282,30,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,278,15,Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 295, Color.white, Color.decode("#2EFBFF"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 275, Color.white, Color.decode("#000131"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 333, 305, Color.white, Color.decode("#98EF92"), 10);
-            
 
         };
     }
@@ -8945,190 +8873,6 @@ static {
             
             GraphicsUtilsPolygonOnly.fillCircle(g, 300, 300, 250, Color.black);
 
-            GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 171, 320, 131, 346, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 346, 175, 363, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 166, 359, 131, 395, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 395, 177, 415, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 177, 415, 158, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 158, 445, 188, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 188, 445, 181, 475, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 181, 475, 224, 461, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 224, 461, 219, 494, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 219, 494, 254, 485, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 254, 485, 282, 499, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 489, 282, 514, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 514, 318, 491, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 313, 489, 353, 504, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 353, 504, 351, 472, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 351, 479, 358, 472, 360, 463, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 351, 463, 401, 463, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 401, 463, 406, 455, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 406, 455, 388, 433, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 396, 427, 403, 437, 396, 442, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 379, 423, 412, 430, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 412, 430, 399, 395, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 399, 395, 438, 377, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 438, 377, 409, 356, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 409, 356, 422, 353, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 422, 353, 411, 341, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 407, 344, 435, 323, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 435, 323, 402, 306, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 197, 342, 186, 346, 199, 363, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 188, 378, 175, 389, 189, 399, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 236, 413, 231, 440, 259, 422, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 395, 321, 409, 326, 395, 338, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 379, 351, 394, 376, 368, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 405, 371, 430, 335, 435, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 458, 302, 482, 322, 455, Color.black,2f);
-
-            //hairband 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 160, 258, 160, 284, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 394, 245, 407, 276, 402, 306, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 402, 306, 394, 313, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 394, 313, 325, 318, Color.black, 2f);
-            
-            GraphicsUtilsPolygonOnly.drawLine(g, 325, 318, 300, 301, Color.black, 2f);
-
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 362, 299, 402, 306, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 308, 280, 324, 253, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 324, 253, 358, 246, 391, 251, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 391, 251, 402, 277, 402, 306, Color.black,2f);
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,325,318,340,276,392,274,402,306,Color.black,2f);
-
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 300, 301, 281, 320, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 281, 320, 204, 318, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 160, 258, 168, 253, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 253, 394, 245, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 291, 284, Color.white, Color.decode("#18191E"), 200);
-
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g, 330, 302, 323, 283, 337, 266, 357, 260,Color.decode("#6A6F81") , 2f);
-            // GraphicsUtilsPolygonOnly.drawLine(g, 357, 260, 373, 266, Color.decode("#6A6F81"), 2f);
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 266, 346, 277, 330, 302, Color.decode("#6A6F81"),2f);
-            // GraphicsUtilsPolygonOnly.floodFill(image, 338, 276, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 261, 299, 256, 303, 243, 308, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 243, 308, 262, 307, 261, 299, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 249, 307, 258, 305, 260, 302, Color.decode("#6A6F81"),4f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 203, 272, 236, 272, 262, 289, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 262, 289, 259, 275, 237, 258, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 258, 216, 262, 203, 272, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 240, 267, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            //hair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 399, 257, 418, 231, 428, 204, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 428, 204, 397, 231, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 397, 231, 418, 190, 429, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 429, 154, 389, 197, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 389, 197, 397, 165, 413, 138, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 413, 138, 382, 158, 356, 185, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 356, 185, 367, 147, 359, 101, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 359, 101, 348, 136, 320, 169, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 320, 169, 331, 134, 308, 84, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 84, 301, 121, 278, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 179, 278, 154, 274, 131, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 274, 131, 253, 91, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 253, 91, 252, 139, 234, 175, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 181, 234, 175, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 234, 175, 212, 139, 204, 87, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 204, 87, 190, 112, 180, 147, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 180, 147, 180, 181, 190, 201, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 190, 201, 168, 185, 148, 149, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 148, 149, 153, 201, 168, 231, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 168, 231, 148, 217, 128, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 128, 189, 144, 241, 160, 271, Color.black,2f);
-
-            
-            
-            //insidehair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 215, 251, 192, 233, 180, 210, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 222, 251, 204, 220, 203, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 249, 289, 229, 298, 190, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 248, 328, 236, 344, 220, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 340, 247, 359, 231, 368, 214, Color.black,2f);
-            
-            //haircolorinside 
-            GraphicsUtilsPolygonOnly.drawLine(g, 145, 241, 144, 220, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 144, 220, 168, 231,  Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 231, 168, 203, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 203, 182, 215, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 177, 239, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 208, 184, 217, 214, 241, 234,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 203, 189, 208, 184, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 234, 237, 199, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 199, 249, 229, 274, 247,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 233, 241, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 190, 316, 221, 316, 243,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 303, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 344, 220, 354, 235, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 343, 235, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 362, 226, 387, 210, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 387, 210, 399, 226, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 379, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 210, 247, 206, 236, 206, 220,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 212, 244, Color.white, Color.decode("#BCC5F3"), 60);
-            //leg
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 217, 463, 212, 491, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 214, 522, 204, 518, 195, 525, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 195, 525, 204, 530, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 204, 523, Color.white, Color.black, 230);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 368, 463, 379, 495, 373, 528, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 528, 387, 518, 398, 531, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 398, 531, 373, 528, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 386, 527, Color.white, Color.black, 230);
-            
-            //mouse 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 265, 371, 296, 374, 339, 363, Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 291, 386, 305, 384, Color.black, 1f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 272, 371, 294, 379, 329, 365, Color.black,1.5f);
-
-            //colorbody 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 355, 317, 287, 379, 171, 443, Color.decode("#68ED5F"),1.5f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 252, 361, Color.white, Color.decode("#98EF92"), 70);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 430, 372, 377, 393, 341, 439, Color.decode("#40C737"),1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 341, 439, 221, 481, Color.decode("#40C737"), 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 308, 421, Color.white, Color.decode("#68ED5F"), 105);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 335, 473, Color.white, Color.decode("#40C737"), 108);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 424, Color.white, Color.decode("#40C737"), 180);
-            //arms 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 143, 351, 103, 425, 221, 390, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 217, 374, 224, 353, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 224, 353, 227, 365, 221, 390, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 227, 378, 234, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 234, 384, 221, 390, Color.black, 4f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 221, 372, Color.decode("#98EF92"), Color.black, 180);
-            
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 422, 353, 478, 390, 391, 251, Color.black,2f);
-            
-            //eyes
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,344,289,353,306,382,306,394,282,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,282,30,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,278,15,Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 295, Color.white, Color.decode("#2EFBFF"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 275, Color.white, Color.decode("#000131"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 333, 305, Color.white, Color.decode("#98EF92"), 10);
-            
-
         };
     }
     private static Consumer<BufferedImage> Gojo17() {
@@ -9139,188 +8883,6 @@ static {
             
             GraphicsUtilsPolygonOnly.fillCircle(g, 300, 300, 275, Color.black);
             
-            GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 171, 320, 131, 346, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 346, 175, 363, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 166, 359, 131, 395, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 395, 177, 415, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 177, 415, 158, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 158, 445, 188, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 188, 445, 181, 475, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 181, 475, 224, 461, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 224, 461, 219, 494, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 219, 494, 254, 485, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 254, 485, 282, 499, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 489, 282, 514, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 514, 318, 491, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 313, 489, 353, 504, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 353, 504, 351, 472, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 351, 479, 358, 472, 360, 463, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 351, 463, 401, 463, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 401, 463, 406, 455, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 406, 455, 388, 433, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 396, 427, 403, 437, 396, 442, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 379, 423, 412, 430, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 412, 430, 399, 395, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 399, 395, 438, 377, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 438, 377, 409, 356, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 409, 356, 422, 353, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 422, 353, 411, 341, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 407, 344, 435, 323, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 435, 323, 402, 306, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 197, 342, 186, 346, 199, 363, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 188, 378, 175, 389, 189, 399, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 236, 413, 231, 440, 259, 422, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 395, 321, 409, 326, 395, 338, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 379, 351, 394, 376, 368, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 405, 371, 430, 335, 435, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 458, 302, 482, 322, 455, Color.black,2f);
-
-            //hairband 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 160, 258, 160, 284, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 394, 245, 407, 276, 402, 306, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 402, 306, 394, 313, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 394, 313, 325, 318, Color.black, 2f);
-            
-            GraphicsUtilsPolygonOnly.drawLine(g, 325, 318, 300, 301, Color.black, 2f);
-
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 362, 299, 402, 306, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 308, 280, 324, 253, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 324, 253, 358, 246, 391, 251, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 391, 251, 402, 277, 402, 306, Color.black,2f);
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,325,318,340,276,392,274,402,306,Color.black,2f);
-
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 300, 301, 281, 320, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 281, 320, 204, 318, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 160, 258, 168, 253, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 253, 394, 245, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 291, 284, Color.white, Color.decode("#18191E"), 200);
-
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g, 330, 302, 323, 283, 337, 266, 357, 260,Color.decode("#6A6F81") , 2f);
-            // GraphicsUtilsPolygonOnly.drawLine(g, 357, 260, 373, 266, Color.decode("#6A6F81"), 2f);
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 266, 346, 277, 330, 302, Color.decode("#6A6F81"),2f);
-            // GraphicsUtilsPolygonOnly.floodFill(image, 338, 276, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 261, 299, 256, 303, 243, 308, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 243, 308, 262, 307, 261, 299, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 249, 307, 258, 305, 260, 302, Color.decode("#6A6F81"),4f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 203, 272, 236, 272, 262, 289, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 262, 289, 259, 275, 237, 258, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 258, 216, 262, 203, 272, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 240, 267, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            //hair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 399, 257, 418, 231, 428, 204, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 428, 204, 397, 231, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 397, 231, 418, 190, 429, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 429, 154, 389, 197, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 389, 197, 397, 165, 413, 138, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 413, 138, 382, 158, 356, 185, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 356, 185, 367, 147, 359, 101, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 359, 101, 348, 136, 320, 169, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 320, 169, 331, 134, 308, 84, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 84, 301, 121, 278, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 179, 278, 154, 274, 131, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 274, 131, 253, 91, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 253, 91, 252, 139, 234, 175, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 181, 234, 175, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 234, 175, 212, 139, 204, 87, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 204, 87, 190, 112, 180, 147, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 180, 147, 180, 181, 190, 201, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 190, 201, 168, 185, 148, 149, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 148, 149, 153, 201, 168, 231, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 168, 231, 148, 217, 128, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 128, 189, 144, 241, 160, 271, Color.black,2f);
-
-            
-            
-            //insidehair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 215, 251, 192, 233, 180, 210, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 222, 251, 204, 220, 203, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 249, 289, 229, 298, 190, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 248, 328, 236, 344, 220, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 340, 247, 359, 231, 368, 214, Color.black,2f);
-            
-            //haircolorinside 
-            GraphicsUtilsPolygonOnly.drawLine(g, 145, 241, 144, 220, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 144, 220, 168, 231,  Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 231, 168, 203, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 203, 182, 215, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 177, 239, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 208, 184, 217, 214, 241, 234,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 203, 189, 208, 184, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 234, 237, 199, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 199, 249, 229, 274, 247,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 233, 241, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 190, 316, 221, 316, 243,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 303, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 344, 220, 354, 235, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 343, 235, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 362, 226, 387, 210, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 387, 210, 399, 226, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 379, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 210, 247, 206, 236, 206, 220,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 212, 244, Color.white, Color.decode("#BCC5F3"), 60);
-            //leg
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 217, 463, 212, 491, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 214, 522, 204, 518, 195, 525, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 195, 525, 204, 530, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 204, 523, Color.white, Color.black, 230);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 368, 463, 379, 495, 373, 528, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 528, 387, 518, 398, 531, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 398, 531, 373, 528, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 386, 527, Color.white, Color.black, 230);
-            
-            //mouse 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 265, 371, 296, 374, 339, 363, Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 291, 386, 305, 384, Color.black, 1f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 272, 371, 294, 379, 329, 365, Color.black,1.5f);
-
-            //colorbody 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 355, 317, 287, 379, 171, 443, Color.decode("#68ED5F"),1.5f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 252, 361, Color.white, Color.decode("#98EF92"), 70);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 430, 372, 377, 393, 341, 439, Color.decode("#40C737"),1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 341, 439, 221, 481, Color.decode("#40C737"), 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 308, 421, Color.white, Color.decode("#68ED5F"), 105);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 335, 473, Color.white, Color.decode("#40C737"), 108);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 424, Color.white, Color.decode("#40C737"), 180);
-            //arms 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 143, 351, 103, 425, 221, 390, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 217, 374, 224, 353, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 224, 353, 227, 365, 221, 390, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 227, 378, 234, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 234, 384, 221, 390, Color.black, 4f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 221, 372, Color.decode("#98EF92"), Color.black, 180);
-            
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 422, 353, 478, 390, 391, 251, Color.black,2f);
-            
-            //eyes
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,344,289,353,306,382,306,394,282,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,282,30,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,278,15,Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 295, Color.white, Color.decode("#2EFBFF"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 275, Color.white, Color.decode("#000131"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 333, 305, Color.white, Color.decode("#98EF92"), 10);
             
 
         };
@@ -9333,189 +8895,6 @@ static {
             
             GraphicsUtilsPolygonOnly.fillCircle(g, 300, 300, 300, Color.black);
 
-            GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 171, 320, 131, 346, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 346, 175, 363, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 166, 359, 131, 395, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 131, 395, 177, 415, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 177, 415, 158, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 158, 445, 188, 445, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 188, 445, 181, 475, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 181, 475, 224, 461, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 224, 461, 219, 494, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 219, 494, 254, 485, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 254, 485, 282, 499, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 489, 282, 514, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 282, 514, 318, 491, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 313, 489, 353, 504, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 353, 504, 351, 472, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 351, 479, 358, 472, 360, 463, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 351, 463, 401, 463, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 401, 463, 406, 455, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 406, 455, 388, 433, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 396, 427, 403, 437, 396, 442, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 379, 423, 412, 430, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 412, 430, 399, 395, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 399, 395, 438, 377, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 438, 377, 409, 356, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 409, 356, 422, 353, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 422, 353, 411, 341, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 407, 344, 435, 323, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 435, 323, 402, 306, Color.black, 2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 197, 342, 186, 346, 199, 363, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 188, 378, 175, 389, 189, 399, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 236, 413, 231, 440, 259, 422, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 395, 321, 409, 326, 395, 338, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 379, 351, 394, 376, 368, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 405, 371, 430, 335, 435, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 458, 302, 482, 322, 455, Color.black,2f);
-
-            //hairband 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 160, 258, 160, 284, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 394, 245, 407, 276, 402, 306, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 402, 306, 394, 313, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 394, 313, 325, 318, Color.black, 2f);
-            
-            GraphicsUtilsPolygonOnly.drawLine(g, 325, 318, 300, 301, Color.black, 2f);
-
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 362, 299, 402, 306, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 325, 318, 308, 280, 324, 253, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 324, 253, 358, 246, 391, 251, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 391, 251, 402, 277, 402, 306, Color.black,2f);
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,325,318,340,276,392,274,402,306,Color.black,2f);
-
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 300, 301, 281, 320, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 281, 320, 204, 318, 163, 310, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 160, 258, 168, 253, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 253, 394, 245, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 291, 284, Color.white, Color.decode("#18191E"), 200);
-
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g, 330, 302, 323, 283, 337, 266, 357, 260,Color.decode("#6A6F81") , 2f);
-            // GraphicsUtilsPolygonOnly.drawLine(g, 357, 260, 373, 266, Color.decode("#6A6F81"), 2f);
-            // GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 266, 346, 277, 330, 302, Color.decode("#6A6F81"),2f);
-            // GraphicsUtilsPolygonOnly.floodFill(image, 338, 276, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 261, 299, 256, 303, 243, 308, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 243, 308, 262, 307, 261, 299, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 249, 307, 258, 305, 260, 302, Color.decode("#6A6F81"),4f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 203, 272, 236, 272, 262, 289, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 262, 289, 259, 275, 237, 258, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 258, 216, 262, 203, 272, Color.decode("#6A6F81"),2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 240, 267, Color.decode("#18191E"), Color.decode("#6A6F81"), 90);
-
-            //hair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 399, 257, 418, 231, 428, 204, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 428, 204, 397, 231, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 397, 231, 418, 190, 429, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 429, 154, 389, 197, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 389, 197, 397, 165, 413, 138, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 413, 138, 382, 158, 356, 185, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 356, 185, 367, 147, 359, 101, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 359, 101, 348, 136, 320, 169, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 320, 169, 331, 134, 308, 84, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 84, 301, 121, 278, 154, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 179, 278, 154, 274, 131, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 274, 131, 253, 91, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 253, 91, 252, 139, 234, 175, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 181, 234, 175, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 234, 175, 212, 139, 204, 87, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 204, 87, 190, 112, 180, 147, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 180, 147, 180, 181, 190, 201, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 190, 201, 168, 185, 148, 149, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 148, 149, 153, 201, 168, 231, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 168, 231, 148, 217, 128, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 128, 189, 144, 241, 160, 271, Color.black,2f);
-
-            
-            
-            //insidehair 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 215, 251, 192, 233, 180, 210, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 222, 251, 204, 220, 203, 189, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 273, 249, 289, 229, 298, 190, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 308, 248, 328, 236, 344, 220, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 340, 247, 359, 231, 368, 214, Color.black,2f);
-            
-            //haircolorinside 
-            GraphicsUtilsPolygonOnly.drawLine(g, 145, 241, 144, 220, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 144, 220, 168, 231,  Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 231, 168, 203, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 168, 203, 182, 215, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 177, 239, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 208, 184, 217, 214, 241, 234,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 203, 189, 208, 184, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 241, 234, 237, 199, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 237, 199, 249, 229, 274, 247,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 233, 241, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 298, 190, 316, 221, 316, 243,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 303, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 344, 220, 354, 235, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 343, 235, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawLine(g, 362, 226, 387, 210, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 387, 210, 399, 226, Color.decode("#6B7082"), 1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 379, 232, Color.white, Color.decode("#BCC5F3"), 60);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 210, 247, 206, 236, 206, 220,Color.decode("#6B7082"),1f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 212, 244, Color.white, Color.decode("#BCC5F3"), 60);
-            //leg
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 217, 463, 212, 491, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 214, 522, 204, 518, 195, 525, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 195, 525, 204, 530, 214, 522, Color.black,2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 204, 523, Color.white, Color.black, 230);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 368, 463, 379, 495, 373, 528, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 373, 528, 387, 518, 398, 531, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 398, 531, 373, 528, Color.black, 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 386, 527, Color.white, Color.black, 230);
-            
-            //mouse 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 265, 371, 296, 374, 339, 363, Color.black,1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 291, 386, 305, 384, Color.black, 1f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 272, 371, 294, 379, 329, 365, Color.black,1.5f);
-
-            //colorbody 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 355, 317, 287, 379, 171, 443, Color.decode("#68ED5F"),1.5f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 252, 361, Color.white, Color.decode("#98EF92"), 70);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 430, 372, 377, 393, 341, 439, Color.decode("#40C737"),1.5f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 341, 439, 221, 481, Color.decode("#40C737"), 2f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 308, 421, Color.white, Color.decode("#68ED5F"), 105);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 335, 473, Color.white, Color.decode("#40C737"), 108);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 424, Color.white, Color.decode("#40C737"), 180);
-            //arms 
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 143, 351, 103, 425, 221, 390, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 217, 374, 224, 353, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 224, 353, 227, 365, 221, 390, Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 221, 390, 227, 378, 234, 384, Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawLine(g, 234, 384, 221, 390, Color.black, 4f);
-            GraphicsUtilsPolygonOnly.floodFill(image, 221, 372, Color.decode("#98EF92"), Color.black, 180);
-            
-            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 422, 353, 478, 390, 391, 251, Color.black,2f);
-            
-            //eyes
-            // GraphicsUtilsPolygonOnly.drawCubicCurve(g,344,289,353,306,382,306,394,282,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,282,30,Color.black,2f);
-            GraphicsUtilsPolygonOnly.drawCircle(g,357,278,15,Color.black,2f);
-
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 295, Color.white, Color.decode("#2EFBFF"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 356, 275, Color.white, Color.decode("#000131"), TOTAL_FRAMES);
-            GraphicsUtilsPolygonOnly.floodFill(image, 333, 305, Color.white, Color.decode("#98EF92"), 10);
-            
 
         };
     }
@@ -9564,7 +8943,7 @@ static {
             Graphics2D g = image.createGraphics();
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
-            
+           //Door
             //door 1 wall
             GraphicsUtilsPolygonOnly.drawLine(g,127,229,127,85,Color.black,1.5f);
             GraphicsUtilsPolygonOnly.drawLine(g,127,85,188,36,Color.black,1.5f);
@@ -9594,43 +8973,37 @@ static {
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,156,100,168,87,188,82,Color.black,1.5f); //เชื่อม diamond
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,82,208,87,220,100,Color.black,1.5f); //เชื่อม diamond
             GraphicsUtilsPolygonOnly.drawLine(g,220,100,220,229,Color.black,1.5f); //เชื่อม wall
-            // door 5 path left (ทุกเส้นเชื่อมตัวละคร)
-            GraphicsUtilsPolygonOnly.drawLine(g,0,316,37,290,Color.black,1.5f); //purple 
-            GraphicsUtilsPolygonOnly.drawLine(g,45,286,127,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,325,39,297,Color.black,1.5f); //blue  
-            GraphicsUtilsPolygonOnly.drawLine(g,53,286,130,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,339,41,306,Color.black,1.5f); //navy 
-            GraphicsUtilsPolygonOnly.drawLine(g,63,288,134,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,355,42,317,Color.black,1.5f); //green 
-            GraphicsUtilsPolygonOnly.drawLine(g,64,298,138,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,373,44,329,Color.black,1.5f); //yellow 
-            GraphicsUtilsPolygonOnly.drawLine(g,60,313,142,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,394,47,342,Color.black,1.5f); // orange 
-            GraphicsUtilsPolygonOnly.drawLine(g,58,329,148,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,414,48,355,Color.black,1.5f); //red 
-            GraphicsUtilsPolygonOnly.drawLine(g,56,346,152,229,Color.black,1.5f); 
+            // door 5 path left 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,316,127,229,Color.black,1.5f); //purple 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,325,130,229,Color.black,1.5f); //blue  
+            GraphicsUtilsPolygonOnly.drawLine(g,0,339,134,229,Color.black,1.5f); //navy 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,355,138,229,Color.black,1.5f); //green 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,373,142,229,Color.black,1.5f); //yellow 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,394,148,229,Color.black,1.5f); // orange  
+            GraphicsUtilsPolygonOnly.drawLine(g,0,414,152,229,Color.black,1.5f); //red 
             GraphicsUtilsPolygonOnly.drawLine(g,0,443,156,229,Color.black,1.5f); //พรม
             // door 6 path right (ทุกเส้นเชื่อมตัวละคร)
             GraphicsUtilsPolygonOnly.drawLine(g,600,335,493,303,Color.black,1.5f); // purple 
-            GraphicsUtilsPolygonOnly.drawLine(g,323,253,243,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,600,339,497,308,Color.black,1.5f); // blue 
-            GraphicsUtilsPolygonOnly.drawLine(g,321,254,240,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,332,255,243,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,339,498,308,Color.black,1.5f); // blue 
+            GraphicsUtilsPolygonOnly.drawLine(g,332,257,240,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,345,500,313,Color.black,1.5f); // navy 
-            GraphicsUtilsPolygonOnly.drawLine(g,321,256,237,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,600,353,488,315,Color.black,1.5f); // green
-            GraphicsUtilsPolygonOnly.drawLine(g,324,259,234,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,332,259,237,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,353,490,316,Color.black,1.5f); // green
+            GraphicsUtilsPolygonOnly.drawLine(g,332,262,234,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,363,492,323,Color.black,1.5f); // yellow 
-            GraphicsUtilsPolygonOnly.drawLine(g,336,267,231,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,332,265,231,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,374,492,331,Color.black,1.5f); // orange 
-            GraphicsUtilsPolygonOnly.drawLine(g,334,270,228,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,328,268,228,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,385,492,340,Color.black,1.5f); //red 
-            GraphicsUtilsPolygonOnly.drawLine(g,323,270,224,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,319,268,224,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,400,492,351,Color.black,1.5f); //พรม
-            GraphicsUtilsPolygonOnly.drawLine(g,327,277,220,229,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,325,277,220,229,Color.black,1.5f);
             // door 7 sun
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,151,66,120,33,138,0,Color.black,1.5f); //เชื่อม wall 
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,235,70,278,38,258,0,Color.black,1.5f); //เชื่อม shadow
-            // Cloud left
+
+        // Cloud left
             //cloud left 1
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,216,19,212,21,224,Color.black,1.5f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,21,224,41,227,44,241,Color.black,1.5f);
@@ -9652,6 +9025,7 @@ static {
             //cloud left 3
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,89,123,97,104,109,109,Color.black,1.5f); //เชื่อม cloud left 2.1
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,109,115,104,127,107,Color.black,1.5f); //เชื่อม wall
+            
         // Cloud right
             // cloud right 1    
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,243,229,254,220,262,229,Color.black,1.5f); //เชื่อม wall + shadow
@@ -9717,6 +9091,7 @@ static {
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,442,34,450,23,459,29,Color.black,1.5f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,459,29,455,15,467,11,Color.black,1.5f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,467,11,462,4,474,0,Color.black,1.5f);
+
 
             //gojobody
             GraphicsUtilsPolygonOnly.drawLine(g, 335, 412, 313, 411, Color.black, 2f);
@@ -9773,6 +9148,7 @@ static {
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 349, 357, 386, 387, 351, Color.black,2f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 433, 347, 455, 380, 456, 346, Color.black,2f);
 
+            GraphicsUtilsPolygonOnly.floodFill(image,411, 389, Color.white, Color.decode("#D8DAE9"), 10);
         };
     }
     private static Consumer<BufferedImage> Heven2() {
@@ -9781,6 +9157,7 @@ static {
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
             
+        //Door
             //door 1 wall
             GraphicsUtilsPolygonOnly.drawLine(g,127,229,127,85,Color.black,1.5f);
             GraphicsUtilsPolygonOnly.drawLine(g,127,85,188,36,Color.black,1.5f);
@@ -9810,42 +9187,36 @@ static {
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,156,100,168,87,188,82,Color.black,1.5f); //เชื่อม diamond
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,82,208,87,220,100,Color.black,1.5f); //เชื่อม diamond
             GraphicsUtilsPolygonOnly.drawLine(g,220,100,220,229,Color.black,1.5f); //เชื่อม wall
-            // door 5 path left (ทุกเส้นเชื่อมตัวละคร)
-            GraphicsUtilsPolygonOnly.drawLine(g,0,316,37,290,Color.black,1.5f); //purple 
-            GraphicsUtilsPolygonOnly.drawLine(g,45,286,127,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,325,39,297,Color.black,1.5f); //blue  
-            GraphicsUtilsPolygonOnly.drawLine(g,53,286,130,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,339,41,306,Color.black,1.5f); //navy 
-            GraphicsUtilsPolygonOnly.drawLine(g,63,288,134,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,355,42,317,Color.black,1.5f); //green 
-            GraphicsUtilsPolygonOnly.drawLine(g,64,298,138,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,373,44,329,Color.black,1.5f); //yellow 
-            GraphicsUtilsPolygonOnly.drawLine(g,60,313,142,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,394,47,342,Color.black,1.5f); // orange 
-            GraphicsUtilsPolygonOnly.drawLine(g,58,329,148,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,0,414,48,355,Color.black,1.5f); //red 
-            GraphicsUtilsPolygonOnly.drawLine(g,56,346,152,229,Color.black,1.5f); 
+            // door 5 path left 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,316,127,229,Color.black,1.5f); //purple 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,325,130,229,Color.black,1.5f); //blue  
+            GraphicsUtilsPolygonOnly.drawLine(g,0,339,134,229,Color.black,1.5f); //navy 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,355,138,229,Color.black,1.5f); //green 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,373,142,229,Color.black,1.5f); //yellow 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,394,148,229,Color.black,1.5f); // orange  
+            GraphicsUtilsPolygonOnly.drawLine(g,0,414,152,229,Color.black,1.5f); //red 
             GraphicsUtilsPolygonOnly.drawLine(g,0,443,156,229,Color.black,1.5f); //พรม
             // door 6 path right (ทุกเส้นเชื่อมตัวละคร)
             GraphicsUtilsPolygonOnly.drawLine(g,600,335,493,303,Color.black,1.5f); // purple 
-            GraphicsUtilsPolygonOnly.drawLine(g,323,253,243,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,600,339,497,308,Color.black,1.5f); // blue 
-            GraphicsUtilsPolygonOnly.drawLine(g,321,254,240,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,332,255,243,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,339,498,308,Color.black,1.5f); // blue 
+            GraphicsUtilsPolygonOnly.drawLine(g,332,257,240,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,345,500,313,Color.black,1.5f); // navy 
-            GraphicsUtilsPolygonOnly.drawLine(g,321,256,237,229,Color.black,1.5f); 
-            GraphicsUtilsPolygonOnly.drawLine(g,600,353,488,315,Color.black,1.5f); // green
-            GraphicsUtilsPolygonOnly.drawLine(g,324,259,234,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,332,259,237,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,353,490,316,Color.black,1.5f); // green
+            GraphicsUtilsPolygonOnly.drawLine(g,332,262,234,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,363,492,323,Color.black,1.5f); // yellow 
-            GraphicsUtilsPolygonOnly.drawLine(g,336,267,231,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,332,265,231,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,374,492,331,Color.black,1.5f); // orange 
-            GraphicsUtilsPolygonOnly.drawLine(g,334,270,228,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,328,268,228,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,385,492,340,Color.black,1.5f); //red 
-            GraphicsUtilsPolygonOnly.drawLine(g,323,270,224,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,319,268,224,229,Color.black,1.5f); 
             GraphicsUtilsPolygonOnly.drawLine(g,600,400,492,351,Color.black,1.5f); //พรม
-            GraphicsUtilsPolygonOnly.drawLine(g,327,277,220,229,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,325,277,220,229,Color.black,1.5f);
             // door 7 sun
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,151,66,120,33,138,0,Color.black,1.5f); //เชื่อม wall 
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,235,70,278,38,258,0,Color.black,1.5f); //เชื่อม shadow
+
         // Cloud left
             //cloud left 1
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,216,19,212,21,224,Color.black,1.5f);
@@ -9868,6 +9239,7 @@ static {
             //cloud left 3
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,89,123,97,104,109,109,Color.black,1.5f); //เชื่อม cloud left 2.1
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,109,115,104,127,107,Color.black,1.5f); //เชื่อม wall
+            
         // Cloud right
             // cloud right 1    
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,243,229,254,220,262,229,Color.black,1.5f); //เชื่อม wall + shadow
@@ -9933,6 +9305,7 @@ static {
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,442,34,450,23,459,29,Color.black,1.5f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,459,29,455,15,467,11,Color.black,1.5f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g,467,11,462,4,474,0,Color.black,1.5f);
+
 
             //sukubody 
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 151, 366, 139, 362, 116, 396, Color.black,2f);
@@ -10015,6 +9388,7 @@ static {
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 349, 357, 386, 387, 351, Color.black,2f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 433, 347, 455, 380, 456, 346, Color.black,2f);
 
+            GraphicsUtilsPolygonOnly.floodFill(image,411, 389, Color.white, Color.decode("#D8DAE9"), 10);
         };
     }
     
