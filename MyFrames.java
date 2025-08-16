@@ -41,7 +41,7 @@ public class MyFrames {
 static {
     for (int i = 0; i < TOTAL_FRAMES; i++) {
         if (i < 17) {
-            FRAMES[i] = Potatoframe5();
+            FRAMES[i] = Heven1();
         } 
         // else if (i < 34) {
         //     FRAMES[i] = Potatoframe2();
@@ -5478,11 +5478,18 @@ static {
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 209, 483, 215, 468, 216, 457, Color.black,2f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 216, 457, 205, 448, 180, 437, Color.black,2f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 192, 442, 191, 426, 199, 411, Color.black,2f);
-            
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 199, 411, 197, 408, 192, 406, Color.black,2f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 188, 415, 196, 386, 180, 381, Color.black,2f);
+            GraphicsUtilsPolygonOnly.drawCircle(g,161,381,20,Color.black,2f);
 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 115, 434, 142, 428, 164, 446, Color.black,1f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 138, 476, 197, 463, 188, 486, Color.black,1f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 90, 449, 103, 468, 116, 475, Color.black,1f);
+            GraphicsUtilsPolygonOnly.floodFill(image, 140, 461, Color.white, Color.decode("#FAB0A7"), 80);
 
-
-
+            //sukueye
+            GraphicsUtilsPolygonOnly.drawCircle(g,166,389,10,Color.black,2f);
+            GraphicsUtilsPolygonOnly.floodFill(image,161, 384, Color.white, Color.black, 80);
 
         };
     }
