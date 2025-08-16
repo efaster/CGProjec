@@ -3210,6 +3210,172 @@ static {
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
             
+           //floor 1 line(left)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,406,31,406,50,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,405,69,403,68,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,68,403,80,404,86,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,86,403,94,402,100,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,403,108,402,118,403,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,403,125,402,135,405,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,135,405,155,405,Color.black,1.5f); //เชื่อม body
+            // floor 2 line(right)
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,399,399,420,401,433,401,Color.black,1.5f); // เชื่อม body
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,433,401,454,400,470,397,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,470,397,484,393,496,394,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,496,394,512,393,522,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,522,395,559,394,575,395,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,395,587,397,600,396,Color.black,1.5f);
+            //floor 3 dirt
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,26,469,32,466,37,468,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,37,468,40,470,44,468,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,571,88,568,90,567,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,90,567,93,566,96,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,96,567,100,568,104,567,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,182,532,187,529,193,530,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,193,530,199,532,203,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,203,530,205,529,207,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,207,530,212,531,214,529,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,214,529,218,528,220,530,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,302,577,310,575,315,578,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,315,578,323,581,330,577,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,473,406,471,411,472,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,411,472,415,473,421,471,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,493,538,498,535,501,537,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,501,537,505,539,510,539,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,504,448,510,444,516,446,Color.black,1.5f); //7
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,516,446,523,447,528,446,Color.black,1.5f);
+            //floor 4 rock
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,53,526,48,522,52,517,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,52,517,61,513,75,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,75,513,81,519,79,524,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,79,524,64,526,53,526,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,95,436,90,434,92,431,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,92,431,104,427,109,429,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,429,112,431,111,434,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,434,105,435,95,436,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,497,513,493,511,495,508,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,495,508,500,506,509,506,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,509,506,516,510,515,516,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,516,509,517,497,513,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,559,424,553,422,553,420,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,553,420,559,417,572,419,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,572,419,576,422,573,424,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,573,424,568,425,559,424,Color.black,1.5f);
+            
+        // Tree 1
+            //1.1 branch down
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,225,20,238,38,225,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,225,51,238,69,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,69,225,80,241,108,225,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,108,225,121,238,141,228,Color.black,1.5f); //เชื่อม hair
+            //1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,104,0,114,8,111,25,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,111,25,130,28,132,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,132,45,147,61,144,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,82,160,85,167,105,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,167,105,180,109,183,135,Color.black,1.5f); //เชื่อม hair
+            //1.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,37,40,45,49,37,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,49,37,54,45,69,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,20,109,25,117,36,112,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,36,112,42,115,49,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,100,91,108,97,118,88,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,88,126,97,134,88,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,4,167,14,169,17,164,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,17,164,22,168,29,166,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,64,194,73,201,84,192,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,192,90,200,96,195,Color.black,1.5f);
+            //1.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,406,30,391,31,384,Color.black,1.5f); //เชื่อม floor1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,384,33,338,31,277,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,31,277,33,255,33,228,Color.black,1.5f); //เชื่อม 1.1 branch down
+            //1.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,80,404,76,321,80,234,Color.black,1.5f); //เชื่อม dirt1 + 1.1 branch down
+        //Tree 2
+            //2.1 branch down 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,235,425,248,440,244,Color.black,1.5f); //เชื่อม hair
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,440,244,446,253,466,244,Color.black,1.5f); //เชื่อม คำ ด้านซ้าย
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,544,247,560,255,576,242,Color.black,1.5f); //เชื่อม คำ ด้านขวา
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,576,242,585,252,600,238,Color.black,1.5f);
+            //2.2 branch left
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,476,0,465,8,464,22,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,464,22,440,34,447,42,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,447,42,430,52,425,70,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,425,70,403,81,403,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,403,106,387,116,392,134,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,392,134,375,137,364,154,Color.black,1.5f); //เชื่อม hair
+            //2.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,42,520,50,527,43,Color.black,1.5f); //1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,43,534,50,541,43,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,445,107,451,114,462,107,Color.black,1.5f); //2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,462,107,468,113,475,106,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,87,569,92,577,85,Color.black,1.5f); //3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,577,85,583,92,592,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,503,134,514,137,520,129,Color.black,1.5f); //4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,129,523,140,534,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,534,135,540,140,544,135,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,444,179,450,187,461,177,Color.black,1.5f); //5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,461,177,470,185,482,177,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,558,188,566,198,574,191,Color.black,1.5f); //6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,574,191,576,198,588,197,Color.black,1.5f);
+            //2.4 trunk1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,511,394,513,364,513,338,Color.black,1.5f); //เชื่อม คำ
+            //2.5 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,560,394,559,356,561,329,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,561,329,561,288,566,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+        //Tree 3
+            //3.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,155,84,156,69,176,53,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,176,53,172,42,188,33,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,33,186,20,205,11,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,205,11,203,7,211,0,Color.black,1.5f);
+            //3.2 right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,333,0,350,16,345,31,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,345,31,365,34,363,57,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,363,57,377,57,371,80,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,371,80,387,81,386,104,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,386,104,393,105,396,110,Color.black,1.5f); //เชื่อม 2.2 branch left
+            //3.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,225,28,234,32,239,26,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,239,26,244,32,251,26,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,306,46,313,50,318,45,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,318,45,326,51,334,46,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,230,78,238,85,245,79,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,245,79,247,85,254,81,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,281,105,287,112,294,108,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,340,102,349,105,355,100,Color.black,1.5f);
+        //Tree 4
+            //4.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,123,27,127,18,139,14,Color.black,1.5f); //เชื่อม 1.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,139,14,137,5,150,0,Color.black,1.5f);
+            //4.2 right 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,179,0,186,3,188,10,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,10,196,7,200,13,Color.black,1.5f); //เชื่อม 3.1 branch left
+            //4.3 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,144,20,147,22,152,19,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,158,32,161,37,167,34,Color.black,1.5f);
+            //4.4 Trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,146,313,144,268,146,239,Color.black,1.5f); //เชื่อม hair+body
+            GraphicsUtilsPolygonOnly.drawLine(g,149,379,149,354,Color.black,1.5f); //เชื่อม body ล่าง
+            GraphicsUtilsPolygonOnly.drawLine(g,148,336,147,324,Color.black,1.5f); //เชื่อม body บน
+        //Tree 5
+            // 5.1 left 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,370,60,381,45,398,41,Color.black,1.5f); //เชื่อม 3.2 branch right
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,41,394,28,409,25,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,409,25,404,15,421,8,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,421,8,420,2,424,0,Color.black,1.5f);
+            // 5.2 leaf
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,427,20,435,22,440,17,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,388,62,390,65,395,62,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,395,62,398,66,403,61,Color.black,1.5f);   
+            //5.3 trunk1 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,450,400,448,344,448,309,Color.black,1.5f); //เชื่อม floor2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,448,309,452,275,452,250,Color.black,1.5f); //เชื่อม 2.1 branch down
+            //5.4 trunk2 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,394,488,258,488,328,Color.black,1.5f); //เชื่อม dirt2 + 2.1 branch down
+            
+
+
             //body
             GraphicsUtilsPolygonOnly.drawLine(g, 163, 310, 135, 316, Color.black, 2f);
             GraphicsUtilsPolygonOnly.drawLine(g, 135, 316, 156, 330, Color.black, 2f);
@@ -5465,6 +5631,159 @@ static {
             g.setColor(Color.WHITE);
             g.fillRect(0, 0, image.getWidth(), image.getHeight());
             
+            //door 1 wall
+            GraphicsUtilsPolygonOnly.drawLine(g,127,229,127,85,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,127,85,188,36,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,36,243,85,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,243,85,243,229,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,243,229,127,229,Color.black,1.5f);
+            //door 2 shadow
+            GraphicsUtilsPolygonOnly.drawLine(g,188,36,254,84,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,254,84,254,224,Color.black,1.5f); //เชื่อม cloud right 1
+            //door 3 diamond
+            GraphicsUtilsPolygonOnly.drawLine(g,188,36,188,53,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,53,178,67,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,178,67,188,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,82,198,67,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,198,67,188,53,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,53,188,67,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,67,183,58,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,67,178,67,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,67,182,73,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,67,186,78,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,67,188,82,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,67,192,74,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,67,198,67,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawLine(g,188,67,193,59,Color.black,1.5f);
+            //door 4 inside
+            GraphicsUtilsPolygonOnly.drawLine(g,156,229,156,100,Color.black,1.5f); //เชื่อม wall
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,156,100,168,87,188,82,Color.black,1.5f); //เชื่อม diamond
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,188,82,208,87,220,100,Color.black,1.5f); //เชื่อม diamond
+            GraphicsUtilsPolygonOnly.drawLine(g,220,100,220,229,Color.black,1.5f); //เชื่อม wall
+            // door 5 path left (ทุกเส้นเชื่อมตัวละคร)
+            GraphicsUtilsPolygonOnly.drawLine(g,0,316,37,290,Color.black,1.5f); //purple 
+            GraphicsUtilsPolygonOnly.drawLine(g,45,286,127,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,325,39,297,Color.black,1.5f); //blue  
+            GraphicsUtilsPolygonOnly.drawLine(g,53,286,130,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,339,41,306,Color.black,1.5f); //navy 
+            GraphicsUtilsPolygonOnly.drawLine(g,63,288,134,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,355,42,317,Color.black,1.5f); //green 
+            GraphicsUtilsPolygonOnly.drawLine(g,64,298,138,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,373,44,329,Color.black,1.5f); //yellow 
+            GraphicsUtilsPolygonOnly.drawLine(g,60,313,142,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,394,47,342,Color.black,1.5f); // orange 
+            GraphicsUtilsPolygonOnly.drawLine(g,58,329,148,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,414,48,355,Color.black,1.5f); //red 
+            GraphicsUtilsPolygonOnly.drawLine(g,56,346,152,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,0,443,156,229,Color.black,1.5f); //พรม
+            // door 6 path right (ทุกเส้นเชื่อมตัวละคร)
+            GraphicsUtilsPolygonOnly.drawLine(g,600,335,493,303,Color.black,1.5f); // purple 
+            GraphicsUtilsPolygonOnly.drawLine(g,323,253,243,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,339,497,308,Color.black,1.5f); // blue 
+            GraphicsUtilsPolygonOnly.drawLine(g,321,254,240,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,345,500,313,Color.black,1.5f); // navy 
+            GraphicsUtilsPolygonOnly.drawLine(g,321,256,237,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,353,488,315,Color.black,1.5f); // green
+            GraphicsUtilsPolygonOnly.drawLine(g,324,259,234,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,363,492,323,Color.black,1.5f); // yellow 
+            GraphicsUtilsPolygonOnly.drawLine(g,336,267,231,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,374,492,331,Color.black,1.5f); // orange 
+            GraphicsUtilsPolygonOnly.drawLine(g,334,270,228,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,385,492,340,Color.black,1.5f); //red 
+            GraphicsUtilsPolygonOnly.drawLine(g,323,270,224,229,Color.black,1.5f); 
+            GraphicsUtilsPolygonOnly.drawLine(g,600,400,492,351,Color.black,1.5f); //พรม
+            GraphicsUtilsPolygonOnly.drawLine(g,327,277,220,229,Color.black,1.5f);
+            // door 7 sun
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,151,66,120,33,138,0,Color.black,1.5f); //เชื่อม wall 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,235,70,278,38,258,0,Color.black,1.5f); //เชื่อม shadow
+        // Cloud left
+            //cloud left 1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,0,216,19,212,21,224,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,21,224,41,227,44,241,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,44,241,59,233,72,241,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,72,241,80,224,105,229,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,105,229,112,220,127,222,Color.black,1.5f);
+            //cloud left 2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,9,121,21,119,30,127,Color.black,1.5f); //2.1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,30,127,39,121,50,126,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,50,126,73,109,84,123,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,84,123,97,123,102,132,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,102,132,115,135,114,143,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,114,143,120,146,118,158,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,118,158,123,150,127,150,Color.black,1.5f); //เชื่อม wall
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,47,0,51,7,38,24,Color.black,1.5f); //2.2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,38,24,60,25,63,33,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,63,33,78,52,65,66,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,65,66,87,85,73,117,Color.black,1.5f); //เชื่อม cloud left 2.1
+            //cloud left 3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,89,123,97,104,109,109,Color.black,1.5f); //เชื่อม cloud left 2.1
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,109,109,115,104,127,107,Color.black,1.5f); //เชื่อม wall
+        // Cloud right
+            // cloud right 1    
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,243,229,254,220,262,229,Color.black,1.5f); //เชื่อม wall + shadow
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,262,229,281,213,291,224,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,291,224,300,217,305,231,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,305,231,311,223,318,232,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,318,232,320,236,330,224,Color.black,1.5f); //เชื่อม body
+            // cloud right 2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,491,225,511,218,523,229,Color.black,1.5f); //เชื่อม body
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,523,229,532,221,545,230,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,545,230,557,217,575,223,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,575,223,587,214,597,217,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,597,217,597,214,600,212,Color.black,1.5f);
+            // cloud right 3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,254,189,256,153,274,173,Color.black,1.5f); //เชื่อม wall
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,274,173,274,157,288,155,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,288,155,284,146,297,141,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,297,141,297,129,308,133,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,308,133,308,111,337,104,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,337,104,334,84,360,85,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,360,85,379,69,398,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,398,89,408,81,413,94,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,413,94,419,79,435,77,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,435,77,445,69,454,89,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,454,89,469,73,484,84,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,484,84,501,73,508,91,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,508,91,513,75,527,73,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,527,73,527,63,537,61,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,537,61,529,39,548,28,Color.black,1.5f); //เชื่อม cloud right 6
+            // cloud right 4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,519,224,523,201,545,199,Color.black,1.5f); //เชื่อม cloud right 2
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,545,199,542,174,557,166,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,557,166,554,153,568,148,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,568,148,564,135,586,130,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,586,130,578,118,588,114,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,588,114,592,105,600,108,Color.black,1.5f);
+            // cloud right 5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,254,109,265,105,272,112,Color.black,1.5f); //เชื่อม shadow
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,272,112,274,109,278,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,278,109,278,96,292,98,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,292,98,304,85,315,88,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,315,88,325,76,336,95,Color.black,1.5f); //เชื่อม cloud right 3
+            // cloud right 6
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,545,178,535,169,539,158,Color.black,1.5f); //เชื่อม cloud right 4
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,539,158,515,154,520,144,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,520,144,508,133,515,126,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,515,126,508,109,526,109,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,526,109,524,96,543,99,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,543,99,545,79,566,75,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,566,75,564,63,584,58,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,584,58,563,54,563,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,563,34,522,22,535,0,Color.black,1.5f); //เชื่อม cloud right 3
+            // cloud right 7
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,316,86,298,62,316,40,Color.black,1.5f); //เชื่อม cloud right 5
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,316,40,308,21,330,16,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,330,16,325,2,338,0,Color.black,1.5f);
+            // cloud right 8
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,368,78,354,70,367,60,Color.black,1.5f); //เชื่อม cloud right 3
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,367,60,364,46,378,44,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,378,44,388,34,396,44,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,396,44,409,37,415,46,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,415,46,422,29,442,34,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,442,34,450,23,459,29,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,459,29,455,15,467,11,Color.black,1.5f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g,467,11,462,4,474,0,Color.black,1.5f);
+
             //sukubody 
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 151, 366, 139, 362, 116, 396, Color.black,2f);
             GraphicsUtilsPolygonOnly.drawQuadCurve(g, 116, 396, 105, 406, 90, 414, Color.black,2f);
@@ -5490,6 +5809,61 @@ static {
             //sukueye
             GraphicsUtilsPolygonOnly.drawCircle(g,166,389,10,Color.black,2f);
             GraphicsUtilsPolygonOnly.floodFill(image,161, 384, Color.white, Color.black, 80);
+
+            //gojobody
+            GraphicsUtilsPolygonOnly.drawLine(g, 335, 412, 313, 411, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 313, 411, 295, 428, 312, 447, Color.black,2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 312, 447, 337, 446, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 337, 446, 422, 453, 475, 441, Color.black,2f);
+
+            GraphicsUtilsPolygonOnly.drawLine(g, 475, 441, 502, 452, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 490, 409, 512, 417, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 512, 417, 514, 437, 502, 452, Color.black,2f);
+            
+            GraphicsUtilsPolygonOnly.drawLine(g, 490, 409, 490, 314, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 335,412, 335, 322, Color.black, 2f);
+
+            GraphicsUtilsPolygonOnly.drawLine(g, 490,314, 503, 313, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 503,313, 490, 300, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 490,300, 503, 293, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 503,293, 491, 283, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 491,283, 507, 272, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 507,272, 493, 265, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 493,265, 493, 229, Color.black, 2f);
+
+            GraphicsUtilsPolygonOnly.drawLine(g, 335,322, 319, 310, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 319,310, 331, 300, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 331,300, 317, 283, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 317,283, 332, 287, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 332,287, 321, 268, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 321,268, 332, 265, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 332,265, 332, 249, Color.black, 2f);
+
+            GraphicsUtilsPolygonOnly.drawLine(g, 332,249, 329, 216, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 329, 216, 346, 184, 365, 199, Color.black,2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 365,199, 371, 227, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 371, 227, 408, 219, 446, 222, Color.black,2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 446,222, 459, 202, Color.black, 2f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 459, 202, 485, 187, 496, 205, Color.black,2f);
+            GraphicsUtilsPolygonOnly.drawLine(g, 496,205, 493, 229, Color.black, 2f);
+
+            //eyesgojo
+            GraphicsUtilsPolygonOnly.drawCircle(g,377,272,22,Color.black,2f);
+            GraphicsUtilsPolygonOnly.drawCircle(g,447,270,22,Color.black,2f);
+            GraphicsUtilsPolygonOnly.floodFill(image,378, 276, Color.white, Color.decode("#172242"), 120);
+            GraphicsUtilsPolygonOnly.floodFill(image,449, 271, Color.white, Color.decode("#172242"), 120);
+
+            //gojoglasses
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 399, 274, 413, 270, 426, 272, Color.black,2f);
+
+            //gojomouse 
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 398, 294, 414, 296, 427, 293, Color.black,2f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 403, 295, 414, 327, 420, 294, Color.black,2f);
+            GraphicsUtilsPolygonOnly.floodFill(image,413, 306, Color.white, Color.decode("#D7A3BB"), 80);
+
+            //gojoarms
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 360, 349, 357, 386, 387, 351, Color.black,2f);
+            GraphicsUtilsPolygonOnly.drawQuadCurve(g, 433, 347, 455, 380, 456, 346, Color.black,2f);
 
         };
     }
